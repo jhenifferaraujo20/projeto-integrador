@@ -49,6 +49,10 @@ h1, h2, h3 {
   color: black;
   text-transform: uppercase;
   font-size: 2.75rem;
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar {
@@ -110,7 +114,7 @@ li.dropdown {
 
 .newslettersection .newsletter {
   width: fit-content;
-  margin: 0 auto;
+  margin: 15px auto;
   font-size: 2rem;
   text-transform: uppercase;
   position: relative;
@@ -124,7 +128,7 @@ li.dropdown {
   left: 105%;
 }
 
-.newslettersection .newsletter:before, .newslettersection .newsletter:after {
+/*.newslettersection .newsletter:before, .newslettersection .newsletter:after {
   content: "";
   position: absolute;
   display: block;
@@ -132,7 +136,7 @@ li.dropdown {
   width: 1000%;
   top: 60%;
   background: black;
-}
+}*/
 
 .newslettersection p, form {
   text-align: center;
@@ -140,7 +144,7 @@ li.dropdown {
 }
 
 .newslettersection form{
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
   padding-bottom: 50px;
   margin: 0;
 }
@@ -172,6 +176,11 @@ li.dropdown {
 
 .rodape ul{
   list-style-type: none;
-  padding: 0;
-  line-height: 1.6;
+  padding-left: 0;
+  line-height: 2;
 }
+
+.rodape figure img{
+  padding: 5px 5px 0 0;
+} 
+
