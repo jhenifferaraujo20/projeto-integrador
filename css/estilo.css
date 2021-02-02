@@ -12,6 +12,7 @@ body {
 h1, h2, h3 {
   font-weight: inherit;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 ::-webkit-input-placeholder {
@@ -23,8 +24,8 @@ h1, h2, h3 {
 .cabecalho {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin: 20px;
+  align-items: center;
+  margin: 30px;
 }
 
 .campo-busca input {
@@ -75,7 +76,10 @@ label[for="bt-menu"]{
 }
 
 .navbar {
-  margin: 0 250px;
+  margin: 0 200px;
+  background-color: #ffffff;
+  letter-spacing: 2.25px;
+  border-bottom: 1px solid #636363;
 }
 
 .navbar ul {
@@ -83,7 +87,6 @@ label[for="bt-menu"]{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #ffffff;
 }
 
 .navbar li {
@@ -96,10 +99,12 @@ label[for="bt-menu"]{
   text-align: center;
   padding: 14px 40px;
   text-decoration: none;
+  transition: all .3s ease;
 }
 
 .navbar li a:hover, .dropdown:hover .dropbtn {
-  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 li.dropdown {
@@ -111,7 +116,7 @@ li.dropdown {
   position: absolute;
   background-color: #ffffff;
   min-width: 160px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -124,7 +129,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-  text-decoration: underline;
+  color: #636363;
 }
 
 .dropdown:hover .dropdown-content {
@@ -139,13 +144,52 @@ li.dropdown {
 
 .menu-atendimento {
   line-height: 2;
-  margin: 60px 0 0px 100px;
+  margin: 100px 0 0px 100px;
 }
 
 .menu-atendimento a{
   color: black;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+/* =================== FORMULÁRIO FALE CONOSCO =================== */
+.contato {
+  display: flex;
+}
+
+.formulario-contato {
+  margin: 60px;
+  padding-left: 75px;
+  
+}
+
+.formulario-contato form p {
+  padding: 12px 0;
+}
+
+.formulario-contato input, .formulario-contato select, 
+.formulario-contato textarea {
+  width: 500px;
+  outline: none;
+  font-family: 'muli';
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+.formulario-contato input, .formulario-contato select {
+  height: 35px;
+}
+
+.formulario-contato button {
+  padding: 10px 25px;
+  color: white;
+  background-color: #2b2b2b;
+  border: 1px solid #2b2b2b;
+  font-family: 'muli';
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
 }
 
 /* =========================== RODAPÉ =========================== */
@@ -212,6 +256,7 @@ li.dropdown {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
+  letter-spacing: 2px;
 }
 
 .rodape ul {
