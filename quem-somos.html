@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Style</title>
     <link rel="stylesheet" href="https://use.typekit.net/ndt6lhf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--icones-->
     <link href="css/estilo.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -20,7 +21,8 @@
             <h1><a href="index.html">Urban Style</a></h1>
 
             <figure>
-                <a href="cadastro.html"><img src="images/icones/user-account-icon.png" alt="Ícone usuário"></a>
+                <a href="#" class="user"><img src="images/icones/user-account-icon.png"
+                    alt="Ícone usuário"></a>
                 <a href="wish-list.html"><img src="images/icones/heart-icon.png" alt="Ícone coração"></a>
                 <a href="compras.html"><img src="images/icones/shoppingbag.png" alt="Ícone sacola de compras"></a>
             </figure>
@@ -71,8 +73,52 @@
         </nav>
     </header>
 
-    <section>
-        <img width="1366" height="470">
+    <div class="modal-login-cadastro">
+        <div class="modal-login">
+            <a href="#" class="fechar-login"><i class="fa fa-times"></i></a>
+            <strong>Login</strong>
+
+            <form method="POST">
+                <input id="email" type="email" name="email" placeholder="E-mail" required>
+
+                <input id="senha" type="password" name="password" placeholder="Senha" required>
+
+                <a href="#">Esqueci minha senha</a>
+
+                <button type="submit">Entrar</button>
+            </form>
+            <a href="#" class="cadastro">Ainda não tem conta? Cadastre-se</a>
+        </div>
+
+        <div class="modal-cadastro">
+            <a href="#" class="fechar-login"><i class="fa fa-times"></i></a>
+            <strong>Cadastre-se</strong>
+            <form method="POST">
+
+                <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+
+                
+                <input type="text" name="cpf" id="cpf" placeholder="CPF" required>
+
+                
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
+
+                
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+
+                
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <a href="#" class="voltarlogin">Já tenho uma conta</a>
+        </div>
+    </div>
+
+    <section class="menu-atendimento">
+        <h2 class="atendimento">Institucional</h2>
+        <p><a href="contato.html">Quem somos</a></p>
+        <p><a href="troca.html">Nossas lojas</a></p>
     </section>
 
     <footer>
@@ -135,7 +181,8 @@
         </div>
     </footer>
 
-
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/lightslider.js"></script>
     <script src="js/funcoes.js"></script>
 </body>
 

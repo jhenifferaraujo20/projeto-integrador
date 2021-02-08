@@ -20,6 +20,23 @@ h1, h2, h3 {
   font-family: 'muli';
 }
 
+a {
+  text-decoration: none;
+}
+
+/*.hero-section img {
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
 /* =========================== CABEÇALHO =========================== */
 .cabecalho {
   display: flex;
@@ -30,7 +47,7 @@ h1, h2, h3 {
 
 .campo-busca input {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   margin-left: 10px;
   padding-left: 5px;
   outline: none;
@@ -51,71 +68,13 @@ h1, h2, h3 {
 
 .cabecalho h1 a{
   text-decoration: none;
-  color: black;
+  color: rgb(27, 27, 27);
   text-transform: uppercase;
   font-size: 36px;
   position: absolute;
   top: 4%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-/* ==================== LOGIN/ CADASTRO ==================== */
-.popup-login-cadastro {
-  background: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.popup-login {
-  height: 300px;
-  width: 500px;
-  background: #ffffff;
-  padding: 20px;
-  position: relative;
-}
-
-.popup-login i {
-  position: absolute;
-  top: 5px;
-  left: 480px;
-}
-
-.popup-login input {
-  width: 425px;
-  height: 35px;
-  border: 1px solid #2b2b2b;
-  margin: 5px 0;
-  outline: none;
-  font-family: 'muli';
-}
-
-.popup-login a {
-  text-decoration: none;
-  font-size: 12px;
-  color: #636363;
-}
-
-.popup-login button {
-  border: none;
-  padding: 10px 20px;
-  background-color: #2b2b2b;
-  color: #ffffff;
-  font-family: 'muli';
-  text-transform: uppercase;
-  margin: 15px 0;
-  outline: none;
-  cursor: pointer;
-}
-
-.popup-cadastro {
-  display: none;
 }
 
 /* =================== BARRA DE NAVEGAÇÃO ==================== */
@@ -137,7 +96,6 @@ label[for="bt-menu"]{
   margin: 0 200px;
   background-color: #ffffff;
   letter-spacing: 2.25px;
-  border-bottom: 1px solid #636363;
 }
 
 .navbar ul {
@@ -153,7 +111,7 @@ label[for="bt-menu"]{
 
 .navbar a, .dropbtn {
   display: inline-block;
-  color: black;
+  color: rgb(27, 27, 27);
   text-align: center;
   padding: 14px 40px;
   text-decoration: none;
@@ -162,7 +120,6 @@ label[for="bt-menu"]{
 
 .navbar li a:hover, .dropdown:hover .dropbtn {
   font-size: 14px;
-  font-weight: 600;
 }
 
 li.dropdown {
@@ -170,16 +127,31 @@ li.dropdown {
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
   background-color: #ffffff;
+  display: none;
+  justify-content: center;
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  width: 100%;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
+.opcoes-menu{
+  margin: 10px 80px 0 ;
+}
+
+.img-menu {
+  margin: 15px 70px 0;
+}
+
+.img-menu img {
+  width: 350px;
+}
+
 .dropdown-content a {
-  color: black;
+  color: rgb(27, 27, 27);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -191,12 +163,349 @@ li.dropdown {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+}
+
+/* ==================== LOGIN/ CADASTRO ==================== */
+.modal-login-cadastro {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 102;
+}
+
+.modal-login, 
+.modal-cadastro{
+  width: 420px;
+  background: #ffffff;
+  padding: 0 10px 10px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.modal-login form,
+.modal-cadastro form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modal-login strong,
+.modal-cadastro strong {
+  color: #272727;
+  font-size: 32px;
+  margin: 2px 7px 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.modal-login input,
+.modal-cadastro input {
+  width: 90%;
+  height: 45px;
+  margin: 6px 0px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  font-family: 'muli';
+  border-radius: 7px;
+}
+
+.modal-login i,
+.modal-cadastro i {
+  position: relative;
+  left: 180px;
+  color: #2b2b2b;
+}
+
+.modal-login i:hover,
+.modal-cadastro i:hover {
+  color: #6b6b6b;
+}
+
+.modal-login button,
+.modal-cadastro button {
+  background-color: #252525;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  margin-top: 0px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 15px;
+  width: 90%;
+  font-family: 'muli';
+  cursor: pointer;
+}
+
+.modal-login form a {
+  text-decoration: none;
+  font-size: 14px;
+  margin: 5px;
+  position: relative;
+  left: 110px;
+}
+
+.modal-login a,
+.modal-cadastro a {
+  margin: 20px 0 10px;
+  color: #4b4b4b;
+  font-size: 14px;
+}
+
+.modal-login form a:hover, .modal-login a:hover {
+  color: #000000;
+}
+
+.modal-login-cadastro,
+.modal-login,
+.modal-cadastro {
+  display: none;
+}
+
+.login-active,
+.login-active .modal-login{
+  display: flex;
+}
+
+.cadastro-active,
+.cadastro-active .modal-cadastro{
+  display: flex;
+}
+
+/* --------------- Cart ---------------- */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: rgb(240, 157, 81, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: rgb(231, 226, 221);
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+}
+/*---------- Cart Item -------------------- */
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.cart-item h5 {
+  margin: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+}
+.item-amount {
+  text-align: center;
+}
+.remove-item {
+  color: grey;
+  cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+/*---------- End of Cart Item -------------------- */
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+/* --------------- End of Cart ---------------- */
+
+/* ====================== MAIS VENDIDOS ========================= */
+.box {
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 25px;
+}
+
+.slide-img {
+  height: 450px;
+  position: relative;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.detail-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.type a{
+  text-decoration: none;
+  color: #222222;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0;
+}
+
+.type :last-child {
+  color: rgba(26, 26, 26, 0.6);
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-btn {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #252525;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn:hover {
+  color: #ffffff;
+  background-color: #252525;
+  transition: all ease 0.3s;
+}
+
+.overlay {
+  visibility: hidden;
+}
+
+.slide-img:hover .overlay{
+  visibility: visible;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.lightSlider li{
+  list-style-type: none;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================== BANNER ======================= */
+.banner h2 {
+  color: #0a0a0a;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 48px;
+}
+
+.banner-img {
+  width: 450px;
+  position: relative;
+  left: 20%;
+  transform: translateY(-75%);
 }
 
 /* ====================== MENU ATENDIMENTO ====================== */
 .active {
-  border: 1px solid black;
+  border: 1px solid rgb(27, 27, 27);
   padding: 5px;
 }
 
@@ -206,7 +515,7 @@ li.dropdown {
 }
 
 .menu-atendimento a{
-  color: black;
+  color: rgb(27, 27, 27);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -222,6 +531,12 @@ li.dropdown {
   
 }
 
+.formulario-contato strong {
+  font-size: 34px;
+  font-weight: 500;
+  color: #272727;
+}
+
 .formulario-contato form p {
   padding: 12px 0;
 }
@@ -232,18 +547,20 @@ li.dropdown {
   outline: none;
   font-family: 'muli';
   font-size: 16px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
 }
 
 .formulario-contato input, .formulario-contato select {
-  height: 35px;
+  height: 45px;
 }
 
 .formulario-contato button {
-  padding: 10px 25px;
+  padding: 15px 35px;
   color: white;
-  background-color: #2b2b2b;
-  border: 1px solid #2b2b2b;
+  background-color: #252525;
+  border: none;
+  border-radius: 3px;
   font-family: 'muli';
   text-transform: uppercase;
   outline: none;
@@ -273,11 +590,13 @@ li.dropdown {
   height: 1px;
   width: 1000%;
   top: 60%;
-  background: black;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .newsletterssection h2 {
   text-align: center;
+  color: #272727;
+  font-weight: 500;
 }
 
 .newslettersection p, .newslettersection form {
@@ -286,27 +605,29 @@ li.dropdown {
 }
 
 .newslettersection form{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   padding-bottom: 50px;
   margin: 0;
 }
 
 .newslettersection input {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   width: 290px;
   padding: 10px 0 10px 3px;
   outline: none;
 }
 
 .newslettersection button {
-  border: 1px solid black;
-  padding: 10px;
-  color: black;
-  background-color: white;
+  padding: 12px;
   cursor: pointer;
   font-family: 'muli';
   text-transform: uppercase;
+  background-color: #252525;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
 }
 
 .newslettersection button:hover {
@@ -335,7 +656,7 @@ li.dropdown {
 }
 
 .rodape li a {
-  color: black;
+  color: rgb(27, 27, 27);
   text-decoration: none;
 }
 
