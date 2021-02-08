@@ -388,7 +388,7 @@ li.dropdown {
   width: 300px;
   border-radius: 5px;
   overflow: hidden;
-  margin: 25px;
+  margin: 20px;
 }
 
 .slide-img {
@@ -408,7 +408,7 @@ li.dropdown {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
