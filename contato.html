@@ -5,68 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Style</title>
+    <!--fonte-adobe-->
     <link rel="stylesheet" href="https://use.typekit.net/ndt6lhf.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--icones-->
+    <!--font-awesome-->
+    <script src="https://use.fontawesome.com/86ea3a5af0.js"></script>
+    <!--stylesheet-->
     <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <!--light-slider.css-->
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css">
 </head>
 
 <body>
     <header>
         <div class="cabecalho">
             <form class="campo-busca">
-                <input name="campo-busca" placeholder="Buscar...">
+                <input type="search" name="campo-busca" placeholder="Buscar...">
                 <button><img src="images/icones/search-icon.png"></button>
             </form>
 
             <h1><a href="index.html">Urban Style</a></h1>
 
             <figure>
-                <a href="#" class="user"><img src="images/icones/user-account-icon.png"
-                    alt="Ícone usuário"></a>
-                <a href="wish-list.html"><img src="images/icones/heart-icon.png" alt="Ícone coração"></a>
-                <a href="compras.html"><img src="images/icones/shoppingbag.png" alt="Ícone sacola de compras"></a>
+                <a href="#" class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></a>
+                <a href="#"><img src="images/icones/like_icon.png" alt="Ícone coração"></a>
+                <a href="#" class="bag"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></a>
             </figure>
         </div>
 
+        <input type="checkbox" id="bt-menu">
+        <label for="bt-menu">&#9776;</label>
         <nav class="navbar">
             <ul>
                 <li><a href="#">NEW IN</a></li>
-                <li class="dropdown"><a href="#" class="dropbtn">ROUPAS</a>
+                <li class="dropdown"><a href="roupas.html" class="dropbtn">ROUPAS</a>
                     <div class="dropdown-content">
-                        <a href="#">Blusas</a>
-                        <a href="#">Vestidos</a>
-                        <a href="#">Macacões</a>
-                        <a href="#">Camisas</a>
-                        <a href="#">Casacos</a>
-                        <a href="#">Saias</a>
-                        <a href="#">Shorts</a>
-                        <a href="#">Calças</a>
-                        <a href="#">Lingerie</a>
+                        <div class="opcoes-menu">
+                            <a href="#">Blusas</a>
+                            <a href="#">Vestidos</a>
+                            <a href="#">Macacões</a>
+                            <a href="#">Camisas</a>
+                            <a href="#">Casacos</a>
+                            <a href="#">Saias</a>
+                            <a href="#">Shorts</a>
+                            <a href="#">Calças</a>
+                            <a href="#">Lingerie</a>
+                        </div>
+                        <div class="img-menu">
+                            <img src="images/roupas-img-menu.jpg">
+                        </div>
                     </div>
                 </li>
                 <li class="dropdown"><a href="#" class="dropbtn">MODA PRAIA</a>
                     <div class="dropdown-content">
-                        <a href="#">Biquínes</a>
-                        <a href="#">Maiôs</a>
-                        <a href="#">Saídas de praia</a>
-                        <a href="#">Plus Size</a>
+                        <div class="opcoes-menu">
+                            <a href="#">Biquínes</a>
+                            <a href="#">Maiôs</a>
+                            <a href="#">Saídas de praia</a>
+                            <a href="#">Plus Size</a>
+                        </div>
+                        <div class="img-menu">
+                            <img src="images/praia-img-menu1.jpg">
+                        </div>
                     </div>
                 </li>
                 <li class="dropdown"><a href="#" class="dropbtn">CALÇADOS</a>
                     <div class="dropdown-content">
-                        <a href="#">Rasteira</a>
-                        <a href="#">Scarpin</a>
-                        <a href="#">Tênis</a>
-                        <a href="#">Sandália</a>
-                        <a href="#">Coturno</a>
+                        <div class="opcoes-menu">
+                            <a href="#">Rasteira</a>
+                            <a href="#">Scarpin</a>
+                            <a href="#">Tênis</a>
+                            <a href="#">Sandália</a>
+                            <a href="#">Coturno</a>
+                        </div>
+                        <div class="img-menu">
+                            <img src="images/shoes.jpg">
+                        </div>
                     </div>
                 </li>
                 <li class="dropdown"><a href="#" class="dropbtn">ACESSÓRIOS</a>
                     <div class="dropdown-content">
-                        <a href="#">Bolsas</a>
-                        <a href="#">Carteiras</a>
-                        <a href="#">Óculos</a>
-                        <a href="#">Cintos</a>
+                        <div class="opcoes-menu">
+                            <a href="#">Bolsas</a>
+                            <a href="#">Carteiras</a>
+                            <a href="#">Óculos</a>
+                            <a href="#">Cintos</a>
+                        </div>
+                        <div class="img-menu">
+                            <img src="images/acessorios-img-menu.jpg">
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -94,19 +120,14 @@
             <a href="#" class="fechar-login"><i class="fa fa-times"></i></a>
             <strong>Cadastre-se</strong>
             <form method="POST">
-
                 <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
 
-                
                 <input type="text" name="cpf" id="cpf" placeholder="CPF" required>
 
-                
                 <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
 
-                
                 <input type="email" name="email" id="email" placeholder="E-mail" required>
 
-                
                 <input type="password" name="senha" id="senha" placeholder="Senha" required>
 
                 <button type="submit">Cadastrar</button>
@@ -223,8 +244,11 @@
         </div>
     </footer>
 
+    <!--jQuery-->
     <script src="js/jquery-3.5.1.js"></script>
+    <!--light-slider.js-->
     <script src="js/lightslider.js"></script>
+    <!--javascript-->
     <script src="js/funcoes.js"></script>
 </body>
 

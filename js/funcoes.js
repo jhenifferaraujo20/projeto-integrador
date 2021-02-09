@@ -27,6 +27,13 @@ window.onclick = function(event) {
     }
 };
 
+/* ====================== HERO SLIDER ===================== */
+let banners = ["hero-img.jpg"]
+
+function TrocarBanner(banner){
+    document.querySelector(".imagem-banner").src = "images/" + banners[banner];
+}
+
 /* =================== PRODUTOS SLIDER ===================== */
 $(document).ready(function() {
     $('#autoWidth').lightSlider({

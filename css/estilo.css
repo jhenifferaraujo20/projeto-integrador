@@ -24,19 +24,6 @@ a {
   text-decoration: none;
 }
 
-/*.hero-section img {
-  height: auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
-
 /* =========================== CABEÇALHO =========================== */
 .cabecalho {
   display: flex;
@@ -383,7 +370,38 @@ li.dropdown {
 
 /* --------------- End of Cart ---------------- */
 
-/* ====================== MAIS VENDIDOS ========================= */
+/* ======================== HERO ======================= */
+.hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-btn {
+  position: relative;
+  left: 78%;
+  transform: translateY(-1100%);
+}
+
+.slide-btn button {
+  background: #ffffff;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 3px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+
+/* ================= SLIDER MAIS VENDIDOS ================ */
+.subtitulo-mais-vendidos {
+  text-align: center;
+  font-size: 28px;
+  padding: 0;
+  position: relative;
+  top: 50px;
+}
+
 .box {
   width: 300px;
   border-radius: 5px;
@@ -476,10 +494,6 @@ li.dropdown {
   }
 }
 
-.lightSlider li{
-  list-style-type: none;
-}
-
 .slider {
   width: 100%;
   height: 100vh;
@@ -487,6 +501,10 @@ li.dropdown {
   justify-content: center;
   align-items: center;
 }
+
+.lightSlider .active {
+  border: 0;
+} 
 
 /* ======================== BANNER ======================= */
 .banner h2 {
