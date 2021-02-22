@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ======================== HERO ======================= */
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide {
+    display: none;
+  }
+  .slide.active {
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navigation {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    top: 70%;
+    left: 22%;
+  }
+  .navigation .btn {
+    background-color: #ffffff;
+    width: 14px;
+    height: 14px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .btn.active {
+    border: 2px solid #ffffff;
+    background-color: transparent;
+  }
+  .banner {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px 150px;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+  }
+  .banner-content {
+    width: 400px;
+    text-align: center;
+  }
+  .banner-content span {
+    font-size: 52px;
+    line-height: 1.6;
+  }
+  .banner-content h2::before {
+    content: "";
+    position: absolute;
+    transform: translateY(38px) translateX(-60px);
+    border-top: 3px solid #ffffff;
+    width: 50px;
+  }
+  .banner-content h2::after {
+    content: "";
+    position: absolute;
+    transform: translateY(10px) translateX(8px);
+    border-top: 3px solid #ffffff;
+    width: 50px;
+  }
+  .banner-content p {
+    margin: 40px;
+  }
+  .banner-content a {
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 50px;
+  }
+.icones{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    display: block;
+}
+#search {
+    top: 270px;
+}
+#user {
+    top: 230px;
+}
+#bag {
+    top: 190px;
+}
+#menu {
+    top: 20px;
+}
+.icones-social {
+    display: block;
+    position: absolute;
+    right: 40px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#facebook {
+    bottom: 110px;
+}
+#instagram {
+    bottom: 80px;
+}
+#twitter {
+    bottom: 50px;
+}
+#whatsapp {
+    bottom: 20px;
+}
