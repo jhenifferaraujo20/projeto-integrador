@@ -83,6 +83,10 @@ $(document).ready(function() {
     });  
   });
 
+/* ==================== PÁGINA PRODUTOS =================== */
+function mostrarCategorias(){
+  $(".categorias-tamanho").toggle()
+};
 /* ==================== PÁGINA PRODUTO ==================== */
 function mostrarInfo(){
     $(".info").toggle()

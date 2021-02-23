@@ -176,35 +176,57 @@
     </div>
 
     <section class="cabecalho-pagina-produtos">
-        <img src="images/banner-roupas.jpg">
+        <!--<img src="images/banner-roupas.jpg">-->
         <div class="nav-links">
             <a href="index.html">Home |</a>
             <a href="roupas.html">Roupas</a>
         </div>
-        <div>
-            <span onclick="mostrarCategorias();">Categorias <i class="fa fa-angle-down"></i></span>
-            <ul>
-                <li><a href="#">Blusas</a></li>
-                <li><a href="#">Vestidos</a></li>
-                <li><a href="#">Macacões</a></li>
-                <li><a href="#">Camisas</a></li>
-                <li><a href="#">Casacos</a></li>
-                <li><a href="#">Saias</a></li>
-                <li><a href="#">Shorts</a></li>
-                <li><a href="#">Calças</a></li>
-                <li><a href="#">Lingerie</a></li>
-            </ul>
-        </div>
-        <div>
-            <label for="ordenar">Ordenar por </label>
-            <select name="ordenar" id="ordenar">
-                <option value="novidades">Novidades</option>
-                <option value="menor-preço">Menor preço</option>
-                <option value="maior-preço">Maior preço</option>
-                <option value="mais-vendidos">Mais vendidos</option>
-            </select>
+        <div class="filtro-ordenar">
+            <div class="filtro">
+                <span onclick="mostrarCategorias();">Filtrar por <i class="fa fa-angle-down"></i></span>
+                <div class="categorias-tamanho">
+                    <div class="row">
+                        <div class="col-1">
+                            <ul>
+                                <li>Categorias</li>
+                                <li><a href="#">Blusas</a></li>
+                                <li><a href="#">Vestidos</a></li>
+                                <li><a href="#">Macacões</a></li>
+                                <li><a href="#">Camisas</a></li>
+                                <li><a href="#">Casacos</a></li>
+                                <li><a href="#">Saias</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Calças</a></li>
+                                <li><a href="#">Lingerie</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2">
+                            <div class="tamanho-produto">
+                                <p>Tamanho</p>
+                                <button type="button">PP</button>
+                                <button type="button">P</button>
+                                <button type="button">M</button>
+                                <button type="button">G</button>
+                                <button type="button">GG</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button">Filtrar</button>
+                    <button type="button">Limpar filtro</button>
+                </div>
+            </div>
+            <div class="ordenar">
+                <label for="ordenar">Ordenar por </label>
+                <select name="ordenar" id="ordenar">
+                    <option value="novidades">Novidades</option>
+                    <option value="menor-preço">Menor preço</option>
+                    <option value="maior-preço">Maior preço</option>
+                    <option value="mais-vendidos">Mais vendidos</option>
+                </select>
+            </div>
         </div>
     </section>
+
     <section class="pagina-produtos">
         <div class="row">
             <div class="box">
@@ -333,7 +355,7 @@
         <div class="row">
             <div class="box">
                 <div class="slide-img">
-                    <img src="images/slide-img-5.jpg">
+                    <img src="images/img-pag-produtos-1.jpg">
                     <div class="overlay">
                         <a href="#" class="buy-btn">Shop Now</a>
                     </div>
@@ -348,7 +370,7 @@
 
             <div class="box">
                 <div class="slide-img">
-                    <img src="images/slide-img-6.jpg">
+                    <img src="images/img-pag-produtos-3.jpg">
                     <div class="overlay">
                         <a href="#" class="buy-btn">Shop Now</a>
                     </div>
@@ -363,7 +385,7 @@
 
             <div class="box">
                 <div class="slide-img">
-                    <img src="images/slide-img-7.jpg">
+                    <img src="images/img-pag-produtos-4.jpg">
                     <div class="overlay">
                         <a href="#" class="buy-btn">Shop Now</a>
                     </div>
@@ -378,7 +400,7 @@
 
             <div class="box">
                 <div class="slide-img">
-                    <img src="images/slide-img-8.jpg">
+                    <img src="images/img-pag-produtos-5.jpg">
                     <div class="overlay">
                         <a href="#" class="buy-btn">Shop Now</a>
                     </div>
@@ -396,7 +418,9 @@
     <footer>
         <div class="rodape">
             <section class="institucional">
-                <h3>Institucional<!--<i class="fa fa-angle-down"></i>--></h3>
+                <h3>Institucional
+                    <!--<i class="fa fa-angle-down"></i>-->
+                </h3>
                 <ul>
                     <li><a href="quem-somos.html">Quem somos</a></li>
                     <li>Nossas Lojas</li>
