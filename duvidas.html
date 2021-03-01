@@ -136,30 +136,29 @@
         </div>
     </div>
 
-    <div class="sacola-overlay">
-        <div class="sacola">
-            <span class="fechar-sacola">
+    <!-- cart -->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart">
                 <i class=" fa fa-times"></i>
             </span>
-            <h2>Sua Sacola
-                <span>(00)</span>
-            </h2>
-            <div class="conteudo-sacola">
-                <div class="itens-sacola">
+            <h2>Sua Sacola</h2>
+            <div class="cart-content">
+                <div class="cart-item">
                     <img src="">
                     <div class="item-info">
                         <span>produto</span><br>
                         <span>R$219,99</span><br>
                         <i class="fa fa-minus"></i>
-                        <input class="qtdValue" value="1" readonly>
+                        <span class="item-amount">1</span>
                         <i class="fa fa-plus"></i>
                     </div>
                     <div>
-                        <a class="remove-item"><i class="fa fa-trash-o"></i></a>
+                        <span class="remove-item"><i class="fa fa-trash-o"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="sacola-footer">
+            <div class="cart-footer">
                 <div class="frete">
                     <form>
                         <label for="cep">Calcular frete</label>
@@ -167,13 +166,14 @@
                         <button>Calcular</button>
                     </form>
                 </div>
-                <p>Subtotal: <span class="sacola-subtotal">R$ 0</span></p>
-                <p>Frete: <span class="sacola-frete">R$ 0</span></p>
-                <p>total: <span class="sacola-total">R$ 0</span></p>
+                <p>Subtotal: <span>R$ 0</span></p>
+                <p>Frete: <span>R$ 0</span></p>
+                <p>total: R$ <span class="cart-total">0</span></p>
                 <button class="finalizar-compra">Finalizar compra</button>
             </div>
         </div>
     </div>
+    <!-- end of cart -->
 
     <section class="menu-atendimento">
         <h2 class="atendimento">Atendimento</h2>

@@ -136,30 +136,29 @@
         </div>
     </div>
 
-    <div class="sacola-overlay">
-        <div class="sacola">
-            <span class="fechar-sacola">
+    <!-- cart -->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart">
                 <i class=" fa fa-times"></i>
             </span>
-            <h2>Sua Sacola
-                <span>(00)</span>
-            </h2>
-            <div class="conteudo-sacola">
-                <div class="itens-sacola">
+            <h2>Sua Sacola</h2>
+            <div class="cart-content">
+                <div class="cart-item">
                     <img src="">
                     <div class="item-info">
                         <span>produto</span><br>
                         <span>R$219,99</span><br>
                         <i class="fa fa-minus"></i>
-                        <input class="qtdValue" value="1" readonly>
+                        <p class="item-amount">1</p>
                         <i class="fa fa-plus"></i>
                     </div>
                     <div>
-                        <a class="remove-item"><i class="fa fa-trash-o"></i></a>
+                        <span class="remove-item"><i class="fa fa-trash-o"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="sacola-footer">
+            <div class="cart-footer">
                 <div class="frete">
                     <form>
                         <label for="cep">Calcular frete</label>
@@ -167,13 +166,14 @@
                         <button>Calcular</button>
                     </form>
                 </div>
-                <p>Subtotal: <span class="sacola-subtotal">R$ 0</span></p>
-                <p>Frete: <span class="sacola-frete">R$ 0</span></p>
-                <p>total: <span class="sacola-total">R$ 0</span></p>
+                <p>Subtotal: <span>R$ 0</span></p>
+                <p>Frete: <span>R$ 0</span></p>
+                <p>total: R$ <span class="cart-total">0</span></p>
                 <button class="finalizar-compra">Finalizar compra</button>
             </div>
         </div>
     </div>
+    <!-- end of cart -->
 
     <section class="cabecalho-pagina-produtos">
         <!--<img src="images/banner-roupas.jpg">-->
@@ -211,8 +211,9 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button">Filtrar</button>
-                    <button type="button">Limpar filtro</button>
+                    <button type="button"
+                    class="filtro-btn">Filtrar</button>
+                    <button type="button" class="filtro-btn">Limpar filtro</button>
                 </div>
             </div>
             <div class="ordenar">
@@ -227,189 +228,183 @@
         </div>
     </section>
 
-    <section class="pagina-produtos">
-        <div class="row">
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-1.jpg">
-                    <div class="overlay">
-                        <a href="camisa-de-seda.html" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Camisa de seda</a><br>
-                        <a href="#" class="price">R$ 159,99</a>
-                    </div>
+    <section class="produtos">
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-1.jpg">
+                <div class="overlay">
+                    <a href="camisa-de-seda.html" class="buy-btn">Shop Now</a>
                 </div>
             </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-2.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 199,99</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-3.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 129,99</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-4.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 99,99</a>
-                    </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Camisa de seda</a><br>
+                    <a href="#" class="price">R$ 159,99</a>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-5.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 219,99</a>
-                    </div>
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-2.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
                 </div>
             </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-6.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 149,99</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-7.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 119,99</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/slide-img-8.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 119,99</a>
-                    </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 199,99</a>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/img-pag-produtos-1.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 219,99</a>
-                    </div>
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-3.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
                 </div>
             </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/img-pag-produtos-3.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 149,99</a>
-                    </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 129,99</a>
                 </div>
             </div>
+        </div>
 
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/img-pag-produtos-4.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
-                </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 119,99</a>
-                    </div>
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-4.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
                 </div>
             </div>
-
-            <div class="box">
-                <div class="slide-img">
-                    <img src="images/img-pag-produtos-5.jpg">
-                    <div class="overlay">
-                        <a href="#" class="buy-btn">Shop Now</a>
-                    </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 99,99</a>
                 </div>
-                <div class="detail-box">
-                    <div class="type">
-                        <a href="#">Rabbed Cardigan</a><br>
-                        <a href="#" class="price">R$ 119,99</a>
-                    </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-5.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 219,99</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-6.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 149,99</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-7.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 119,99</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/slide-img-8.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 119,99</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/img-pag-produtos-1.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 219,99</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/img-pag-produtos-3.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 149,99</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/img-pag-produtos-4.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 119,99</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <div class="slide-img">
+                <img src="images/img-pag-produtos-5.jpg">
+                <div class="overlay">
+                    <a href="#" class="buy-btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="type">
+                    <a href="#">Rabbed Cardigan</a><br>
+                    <a href="#" class="price">R$ 119,99</a>
                 </div>
             </div>
         </div>

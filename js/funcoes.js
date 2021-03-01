@@ -112,40 +112,10 @@ $(document).ready(function() {
 });
 
 /* ====================== SACOLA ====================== */
-$(document).on('click','.bag',function(){
-    $('.sacola, .sacola-overlay').addClass('showSacola')
+$(document).on('click','.cart-btn',function(){
+    $('.cart, .cart-overlay').addClass('showCart')
 });
 
-$(document).on('click','.fechar-sacola',function(){
-    $('.sacola, .sacola-overlay').removeClass('showSacola')
+$(document).on('click','.close-cart',function(){
+    $('.cart, .cart-overlay').removeClass('showCart')
 });
-/*
-const bagBtn = document.querySelector(".bag");
-const fecharBag = document.querySelector(".fechar-sacola");
-const checkOut = document.querySelector(".finalizar-compra");
-const sacola = document.querySelector(".sacola");
-const bagOverlay = document.querySelector(".sacola-overlay");
-const bagItens = document.querySelector(".itens-sacola");
-const bagTotal = document.querySelector(".sacola-total");
-const bagConteudo = document.querySelector(".conteudo-sacola");
-
-let bag = [];
-
-class Produtos{
-    getProdutos(){
-        fetch('products.json')
-    }
-}
-
-class DisplayProdutos{
-
-}
-
-class Storage{
-
-}
-
-document.addEventListener("DOMContentLoaded", ()=>{
-    const DisplayProdutos = new DisplayProdutos();
-    const Produtos = new Produtos();
-})*/
