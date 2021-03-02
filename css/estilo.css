@@ -14,6 +14,10 @@ h1, h2, h3 {
 }
 input, button, select, textarea {
   font-family: 'muli';
+  outline: none;
+}
+button, i {
+  cursor: pointer;
 }
 ::-webkit-input-placeholder {
   color: black;
@@ -26,72 +30,69 @@ a {
   height: 6px;
   width: 6px;
 }
-  /* =========================== CABEÇALHO =========================== */
-  .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px;
-  }
-  .campo-busca input {
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-    margin-left: 10px;
-    padding-left: 5px;
-    outline: none;
-  }
-  .campo-busca button {
-    position: absolute;
-    top: 25px;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    outline: none;
-  }
-  .cabecalho figure img {
-    padding-right: 10px;
-  }
-  .cabecalho h1 a{
-    text-decoration: none;
-    color: rgb(27, 27, 27);
-    text-transform: uppercase;
-    font-size: 36px;
-    position: absolute;
-    top: 4%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .cabecalho span {
-    cursor: pointer;
-  }
-  /* =================== BARRA DE NAVEGAÇÃO ==================== */
-  label[for="bt-menu"]{
-    padding: 5px;
-    font-size: 25px;
-    cursor: pointer;
-    height: 40px;
-    display: none;
-    position: absolute;
-    top: 8px;
-  }
-  #bt-menu {
-    display: none;
-  }
-  .navbar {
-    background-color: #f5e8d6;
-    letter-spacing: 2.25px;
-    box-shadow: -6px 0 white, 
-    6px 0 white,
-    0 7px 4px -3px rgba(0, 0, 0, 0.1);
-  }
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-  }
+/* =========================== CABEÇALHO =========================== */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+.campo-busca input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  margin-left: 10px;
+  padding-left: 5px;
+}
+.campo-busca button {
+  position: absolute;
+  top: 25px;
+  border: none;
+  background-color: white;
+}
+.cabecalho figure img {
+  padding-right: 10px;
+}
+.cabecalho h1 a{
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+  text-transform: uppercase;
+  font-size: 36px;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cabecalho span {
+  cursor: pointer;
+}
+/* =================== BARRA DE NAVEGAÇÃO ==================== */
+label[for="bt-menu"]{
+  padding: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  height: 40px;
+  display: none;
+  position: absolute;
+  top: 8px;
+}
+#bt-menu {
+  display: none;
+}
+.navbar {
+  background-color: #f5e8d6;
+  letter-spacing: 2.25px;
+  box-shadow: -6px 0 white, 
+  6px 0 white,
+  0 7px 4px -3px rgba(0, 0, 0, 0.1);
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
   .navbar li {
     float: left;
   }
@@ -189,7 +190,6 @@ a {
     margin: 6px 0px;
     padding: 0 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    outline: none;
     border-radius: 7px;
   }
   .modal-login i,
@@ -208,13 +208,11 @@ a {
     color: #ffffff;
     border: none;
     border-radius: 3px;
-    outline: none;
     margin-top: 0px;
     text-transform: uppercase;
     margin-top: 10px;
     padding: 15px;
     width: 90%;
-    cursor: pointer;
   }
   .modal-login form a {
     text-decoration: none;
@@ -285,7 +283,6 @@ a {
     }
   }
   .close-cart {
-    cursor: pointer;
     margin-left: 5px;
   }
   .cart h2 {
@@ -310,7 +307,6 @@ a {
   }
   .item-info i {
     font-size: 12px;
-    cursor: pointer;
   }
   .item-info span:last-of-type {
     margin: 0px 8px;
@@ -318,6 +314,22 @@ a {
   .remove-item {
     color: grey;
     cursor: pointer;
+  }
+  .cart-items {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    background: #f5e8d6;
+    padding: 6px;
+    border-radius: 30%;
+    font-size: 12px;
+  }
+  .clear-cart {
+    background-color: #ffffff;
+    color: #4b4b4b;
+    border: none;
+    text-transform: uppercase;
+    padding: 0;
   }
   .frete {
     font-size: 12px;
@@ -343,7 +355,6 @@ a {
     height: 30px;
     width: 100px;
     text-transform: uppercase;
-    cursor: pointer;
   }
   .frete button:hover{
     color: #ffffff;
@@ -369,7 +380,6 @@ a {
     color: #ffffff;
     padding: 15px;
     width: 100%;
-    cursor: pointer;
   }
   /* ======================== HERO ======================= */
   .hero-section img {
@@ -477,6 +487,15 @@ a {
     color: #ffffff;
     background-color: #252525;
   }
+  .produtos {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1366px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
   /* =======================Banner ============================== */
   .banner-2 {
     width: 100%;
@@ -558,6 +577,7 @@ a {
     font-weight: 500;
     font-size: 14px;
     padding: 0;
+    text-transform: uppercase;
   }
   .type :last-child {
     color: rgba(26, 26, 26, 0.6);
@@ -617,6 +637,11 @@ a {
   .lightSlider .active {
     border: 0;
   } 
+  .instagram i {
+    font-size: 150px;
+    color: rgba(245, 232, 214, 0.8);
+    margin: 0 60px 80px;
+  }
   /* ====================== PÁGINA PRODUTOS ======================= */
   .cabecalho-pagina-produtos img {
     width: 100%;
@@ -647,7 +672,6 @@ a {
   .ordenar select {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    outline: none;
   }
   .categorias-tamanho {
     margin-top: 25px;
@@ -663,7 +687,6 @@ a {
     padding: 10px 20px;
     border: none;
     border-radius: 7px;
-    outline: none;
     margin: 10px 0px;
   }
   .col-2 .tamanho-produto {
@@ -678,7 +701,7 @@ a {
   .row {
     display: flex;
   }
-  .produtos {
+  .products-center {
     width: 90vw;
     margin: 0 auto;
     max-width: 1366px;
@@ -686,6 +709,7 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
+    margin-bottom: 50px;
   }
   /* ====================== PÁGINA DETALHES PRODUTO ======================== */
   .container {
@@ -743,8 +767,6 @@ a {
     padding: 15px;
     background-color: #ffffff;
     border: 1px solid #000000;
-    outline: none;
-    cursor: pointer;
   }
   .tamanho-produto {
     margin: 25px 0;
@@ -756,8 +778,6 @@ a {
     border: 1px solid #000000;
     width: 40px;
     height: 40px;
-    cursor: pointer;
-    outline: none;
   }
   .tamanho-produto .active {
     color: #ffffff;
@@ -767,8 +787,6 @@ a {
     background-color: #ffffff;
     border: 1px solid #000000;
     padding: 10px 15px;
-    cursor: pointer;
-    outline: none;
   }
   .tabela-medidas button:hover {
     border-color: #252525;
@@ -848,7 +866,6 @@ a {
   .formulario-contato input, .formulario-contato select, 
   .formulario-contato textarea {
     width: 500px;
-    outline: none;
     font-size: 16px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 7px;
@@ -863,8 +880,6 @@ a {
     border: none;
     border-radius: 3px;
     text-transform: uppercase;
-    outline: none;
-    cursor: pointer;
   }
   /* =========================== NEWSLETTER =========================== */
   .newslettersection .newsletter {
@@ -891,17 +906,14 @@ a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.6);
     width: 290px;
     padding: 10px 0 10px 3px;
-    outline: none;
   }
   .newslettersection button {
     padding: 12px;
-    cursor: pointer;
     text-transform: uppercase;
     background-color: #252525;
     color: #ffffff;
     border: none;
     border-radius: 3px;
-    outline: none;
   }
   .newslettersection button:hover {
     color: white;
@@ -939,7 +951,6 @@ a {
     font-size: 24px;
     color: rgba(0, 0, 0, 0.7);
     text-align: left;
-    cursor: pointer;
     position: relative;
     top: 55px;
   }

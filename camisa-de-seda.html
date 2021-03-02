@@ -28,7 +28,8 @@
             <figure>
                 <a href="#" class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></a>
                 <a href="#"><img src="images/icones/like_icon.png" alt="Ícone coração"></a>
-                <a href="#" class="bag"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></a>
+                <a href="#" class="cart-btn"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></a>
+                <div class="cart-items">0</div>
             </figure>
         </div>
 
@@ -145,6 +146,7 @@
             </span>
             <h2>Sua Sacola</h2>
             <div class="cart-content">
+                <!--
                 <div class="cart-item">
                     <img src="">
                     <div class="item-info">
@@ -157,9 +159,10 @@
                     <div>
                         <span class="remove-item"><i class="fa fa-trash-o"></i></span>
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="cart-footer">
+                <button class="clear-cart">limpar sacola</button>
                 <div class="frete">
                     <form>
                         <label for="cep">Calcular frete</label>
@@ -170,7 +173,7 @@
                 <p>Subtotal: <span>R$ 0</span></p>
                 <p>Frete: <span>R$ 0</span></p>
                 <p>total: R$ <span class="cart-total">0</span></p>
-                <button class="finalizar-compra">Finalizar compra</button>
+                <button class="finalizar-compra bag-btn" data-id="id">Finalizar compra</button>
             </div>
         </div>
     </div>
