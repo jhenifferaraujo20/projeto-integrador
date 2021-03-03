@@ -175,27 +175,75 @@
     </div>
     <!-- end of cart -->
 
-    <section class="menu-atendimento">
-        <h2 class="atendimento">Atendimento</h2>
-        <p><a href="contato.html">Fale conosco</a></p>
-        <p><a href="troca.html">Política de troca</a></p>
-        <p><a href="privacidade.html">Política de privacidade</a></p>
-        <p><a href="duvidas.html" class="active">Dúvidas frequentes</a></p>
-    </section>
-
-    <footer>
-        <section class="newslettersection">
-            <h2 class="newsletter">Newsletter</h2>
-            <p>Cadastre-se e receba nossas novidades e promoções.</p>
-            <form>
-                <input type="email" name="email" placeholder="E-mail">
-                <button>Cadastrar</button>
-            </form>
+    <div class="contato">
+        <section class="menu-atendimento">
+            <h2 class="atendimento">Atendimento</h2>
+            <p><a href="contato.html">Fale conosco</a></p>
+            <p><a href="troca.html">Política de troca</a></p>
+            <p><a href="privacidade.html">Política de privacidade</a></p>
+            <p><a href="duvidas.html" class="active">Dúvidas frequentes</a></p>
         </section>
 
+        <section class="formulario-contato">
+            <strong>Dúvidas Frequentes</strong>
+            <ul class="duvidas">
+                <li>
+                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Quais são as formas de pagamento
+                        aceitas?</span>
+                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                        deleniti
+                        quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
+                        modi quisquam itaque molestias tempora, dolorum fuga!</p>
+                </li>
+                <li>
+                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Qual é o prazo de entrega?</span>
+                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                        deleniti
+                        quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
+                        modi quisquam itaque molestias tempora, dolorum fuga!</p>
+                </li>
+                <li>
+                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Como rastrear o meu pedido?</span>
+                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                        deleniti
+                        quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
+                        modi quisquam itaque molestias tempora, dolorum fuga!</p>
+                </li>
+                <li>
+                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Posso alterar o endereço de
+                        entrega?</span>
+                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                        deleniti
+                        quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
+                        modi quisquam itaque molestias tempora, dolorum fuga!</p>
+                </li>
+                <li>
+                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Como realizar a troca ou a devolução
+                        de um produto?</span>
+                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                        deleniti
+                        quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
+                        modi quisquam itaque molestias tempora, dolorum fuga!</p>
+                </li>
+                <li>
+                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Como alterar dados da minha
+                        conta?</span>
+                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                        deleniti
+                        quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
+                        modi quisquam itaque molestias tempora, dolorum fuga!</p>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+
+    <footer>
         <div class="rodape">
             <section class="institucional">
-                <h3>Institucional<i class="fa fa-angle-down"></i></h3>
+                <h3>Institucional
+                    <!--<i class="fa fa-angle-down"></i>-->
+                </h3>
                 <ul>
                     <li><a href="quem-somos.html">Quem somos</a></li>
                     <li>Nossas Lojas</li>
@@ -203,7 +251,7 @@
             </section>
 
             <section class="atendimento">
-                <h3>Atendimento<i class="fa fa-angle-down"></i></h3>
+                <h3>Atendimento</h3>
                 <ul>
                     <li><a href="contato.html">Fale Conosco</a></li>
                     <li><a href="troca.html">Política de Troca</a></li>
@@ -213,34 +261,42 @@
             </section>
 
             <section class="minha-conta">
-                <h3>Minha Conta<i class="fa fa-angle-down"></i></h3>
+                <h3>Minha Conta</h3>
                 <ul>
                     <li>Meus pedidos</li>
                     <li>Minha Conta</li>
                 </ul>
             </section>
 
-            <section class="redes">
-                <h3>Follow Us</h3>
-                <figure>
-                    <img src="images/icones/whatsapp-icon.png" alt="Whatsapp">
-                    <img src="images/icones/facebook-icon.png" alt="Facebook">
-                    <img src="images/icones/instagram-icon.png" alt="Instagram">
-                </figure>
-            </section>
-
-            <section class="pagamento">
-                <h3>Pagamento</h3>
-                <figure>
-                    <img src="images/icones/mastercard_icon.png" alt="Cartão MasterCard">
-                    <img src="images/icones/visa_icon.png" alt="Cartão Visa">
-                    <img src="images/icones/elo_icon.png" alt="Cartão Elo">
-                    <img src="images/icones/hipercard_icon.png">
-                    <img src="images/icones/diners_icon.png" alt="Cartão Diners Club">
-                    <img src="images/icones/amex_icon.png" alt="Cartão American Express">
-                </figure>
+            <section class="newslettersection">
+                <h2 class="newsletter">Newsletter</h2>
+                <p>Cadastre-se e receba nossas novidades e promoções.</p>
+                <form>
+                    <input type="email" name="email" placeholder="E-mail">
+                    <button type="button" class="newsletter-btn">Cadastrar</button>
+                </form>
+                <p class="mensagem-sucesso">CADASTRO REALIZADO COM SUCESSO<br>
+                    Em breve você receberá nossas promoções e novidades exclusivas.</p>
             </section>
         </div>
+
+        <section class="social">
+            <i class="fa fa-facebook icones-social" id="facebook"></i>
+            <i class="fa fa-instagram icones-social" id="instagram"></i>
+            <i class="fa fa-twitter icones-social" id="twitter"></i>
+            <i class="fa fa-whatsapp icones-social" id="whatsapp"></i>
+        </section>
+
+        <section class="pagamento">
+            <figure>
+                <img src="images/icones/mastercard_icon.png" alt="Cartão MasterCard">
+                <img src="images/icones/visa_icon.png" alt="Cartão Visa">
+                <img src="images/icones/elo_icon.png" alt="Cartão Elo">
+                <img src="images/icones/hipercard_icon.png">
+                <img src="images/icones/diners_icon.png" alt="Cartão Diners Club">
+                <img src="images/icones/amex_icon.png" alt="Cartão American Express">
+            </figure>
+        </section>
     </footer>
 
     <!--jQuery-->

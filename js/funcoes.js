@@ -19,6 +19,10 @@ window.onclick = function(event) {
     }
 };
 
+// NEWSLETTER
+$(document).on('click','.newsletter-btn',function(){
+    $('.mensagem-sucesso').addClass('mensagem-sucesso-active')
+});
 
 /* =================== PRODUTOS SLIDER ===================== */
 $(document).ready(function() {
@@ -116,7 +120,7 @@ class UI {
                 <img src=${product.image}>
                 <div class="overlay">
                     <a href="produto.html" class="buy-btn" data-id=${product.id}>Shop Now</a>
-                    <button class="bag-btn buy-btn" data-id=${product.id}>Add to bag</button>
+                    <button class="bag-btn buy-btn" data-id=${product.id}>Adicionar à Sacola</button>
                 </div>
             </div>
             <div class="detail-box">
@@ -136,11 +140,11 @@ class UI {
             let id = button.dataset.id;
             let inCart = cart.find(item => item.id === id);
             if(inCart){
-                button.innerText = "In Cart";
+                button.innerText = "Na Sacola";
                 button.disabled = true
             }
             button.addEventListener('click', (event)=>{
-                event.target.innerText = "In Cart";
+                event.target.innerText = "Na Sacola";
                 event.target.disabled = true;
                 // get product from products
                 let cartItem = {...Storage.getProduct(id), amount: 1 };
@@ -255,7 +259,7 @@ class UI {
         Storage.saveCart(cart);
         let button = this.getSingleButton(id);
         button.disabled = false;
-        button.innerHTML = `Add to bag`;
+        button.innerHTML = `Adicionar à Sacola`;
     }
     getSingleButton(id){
         return buttonsDOM.find(button => button.dataset.id === id);
