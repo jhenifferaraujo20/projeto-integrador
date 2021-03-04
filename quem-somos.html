@@ -26,9 +26,10 @@
             <h1><a href="index.html">Urban Style</a></h1>
 
             <figure>
-                <a href="#" class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></a>
-                <a href="#"><img src="images/icones/like_icon.png" alt="Ícone coração"></a>
-                <a href="#" class="bag"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></a>
+                <span class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></span>
+                <span><img src="images/icones/like_icon.png" alt="Ícone coração"></span>
+                <span class="cart-btn"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></span>
+                <div class="cart-items">0</div>
             </figure>
         </div>
 
@@ -144,21 +145,22 @@
             </span>
             <h2>Sua Sacola</h2>
             <div class="cart-content">
-                <div class="cart-item">
+                <!--<div class="cart-item">
                     <img src="">
                     <div class="item-info">
                         <span>produto</span><br>
                         <span>R$219,99</span><br>
                         <i class="fa fa-minus"></i>
-                        <span class="item-amount">1</span>
+                        <p class="item-amount">1</p>
                         <i class="fa fa-plus"></i>
                     </div>
                     <div>
                         <span class="remove-item"><i class="fa fa-trash-o"></i></span>
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="cart-footer">
+                <button class="clear-cart">limpar sacola</button>
                 <div class="frete">
                     <form>
                         <label for="cep">Calcular frete</label>
@@ -175,58 +177,62 @@
     </div>
     <!-- end of cart -->
 
-    <div class="contato">
-        <section class="menu-atendimento">
-            <h2 class="atendimento">Atendimento</h2>
-            <p><a href="contato.html" class="active">Fale conosco</a></p>
-            <p><a href="troca.html">Política de troca</a></p>
-            <p><a href="privacidade.html">Política de privacidade</a></p>
-            <p><a href="duvidas.html">Dúvidas frequentes</a></p>
-        </section>
+    <section>
+        <div class="sobre-nos-background">
+            <div class="produtos">
+                <div class="slide-img">
+                    <img src="images/categorias-2.jpg">
+                </div>
+                <div class="slide-img">
+                    <img src="images/categorias-4.jpg">
+                </div>
+                <div class="slide-img">
+                    <img src="images/categorias-3.jpg">
+                </div>
+                <div class="slide-img">
+                    <img src="images/categorias.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="sobre-nos">
+            <h2>Sobre Nós</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum obcaecati sit magnam fugit! Quia
+                consequatur
+                explicabo ab cupiditate adipisci excepturi error distinctio, nulla maxime necessitatibus nostrum eius
+                quasi
+                iste vel.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ratione cum quo nisi libero aspernatur
+                quibusdam quidem impedit assumenda vel, rerum dignissimos, pariatur recusandae iusto in a? Iusto, iste
+                ipsam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur recusandae voluptates
+                temporibus dicta earum ut nisi labore illum possimus placeat perferendis ab esse eaque incidunt nihil,
+                eos sit ipsa praesentium?
+            </p>
+        </div>
+        <div class="colecao">
+            <img src="images/sobre-img1.jpg" alt="modelos">
+            <div class="categoria">
+                <h2>Lançamentos frequentes</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sequi! Voluptatum, nulla alias?
+                    Numquam consectetur, veniam quae quidem deserunt atque, cupiditate magnam ea cumque laboriosam
+                    incidunt mollitia eaque? Obcaecati, nulla?
+                </p>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+    </section>
 
-        <section class="formulario-contato">
-            <strong>Fale Conosco</strong>
-            <form method="POST" action="">
-                <p>
-                    <label for="email">Email*</label><br>
-                    <input type="email" id="email" name="email" required>
-                    <span class="error"></span>
-                </p>
-                <p>
-                    <label for="nome">Nome Completo*</label><br>
-                    <input type="text" id="nome" name="nome" required>
-                    <span class="error"></span>
-                </p>
-                <p>
-                    <label for="telefone">Telefone</label><br>
-                    <input type="tel" id="telefone" name="telefone" required>
-                    <span class="error"></span>
-                </p>
-                <p>
-                    <label for="motivo">Motivo do Contato*</label><br>
-                    <select id="motivo" name="motivo">
-                        <option value="">Selecione</option>
-                        <option value="elogio">Elogio</option>
-                        <option value="reclamação">Reclamação</option>
-                        <option value="sugestão">Sugestão</option>
-                        <option value="dúvida">Dúvida</option>
-                        <option value="troca">Troca</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="mensagem">Mensagem*</label><br>
-                    <textarea id="mensagem" name="mensagem" rows="6" cols="68" required></textarea>
-                    <span class="error"></span>
-                </p>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </div>
+    <section class="instagram"><i class="fa fa-instagram"> #URBANSTYLE</i></section>
 
     <footer>
         <div class="rodape">
             <section class="institucional">
-                <h3>Institucional<!--<i class="fa fa-angle-down"></i>--></h3>
+                <h3>Institucional
+                    <!--<i class="fa fa-angle-down"></i>-->
+                </h3>
                 <ul>
                     <li><a href="quem-somos.html">Quem somos</a></li>
                     <li>Nossas Lojas</li>
@@ -288,6 +294,7 @@
     <script src="js/lightslider.js"></script>
     <!--javascript-->
     <script src="js/funcoes.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

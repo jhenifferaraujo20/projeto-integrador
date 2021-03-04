@@ -26,9 +26,9 @@
             <h1><a href="index.html">Urban Style</a></h1>
 
             <figure>
-                <span class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></span>
-                <span><img src="images/icones/like_icon.png" alt="Ícone coração"></span>
-                <span class="cart-btn"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></span>
+                <a href="#" class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></a>
+                <a href="#"><img src="images/icones/like_icon.png" alt="Ícone coração"></a>
+                <a href="#" class="cart-btn"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></a>
                 <div class="cart-items">0</div>
             </figure>
         </div>
@@ -100,6 +100,7 @@
         </nav>
     </header>
 
+    <!-- ===================== LOGIN/ CADASTRO ================== -->
     <div class="modal-login-cadastro">
         <div class="modal-login">
             <a href="#" class="fechar-login"><i class="fa fa-times"></i></a>
@@ -127,9 +128,9 @@
 
                 <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
 
-                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="email" name="email" id="email-cadastro" placeholder="E-mail" required>
 
-                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                <input type="password" name="senha" id="senha-cadastro" placeholder="Senha" required>
 
                 <button type="submit">Cadastrar</button>
             </form>
@@ -145,13 +146,14 @@
             </span>
             <h2>Sua Sacola</h2>
             <div class="cart-content">
-            <!--<div class="cart-item">
+                <!--
+                <div class="cart-item">
                     <img src="">
                     <div class="item-info">
                         <span>produto</span><br>
                         <span>R$219,99</span><br>
                         <i class="fa fa-minus"></i>
-                        <p class="item-amount">1</p>
+                        <span class="item-amount">1</span>
                         <i class="fa fa-plus"></i>
                     </div>
                     <div>
@@ -171,119 +173,88 @@
                 <p>Subtotal: <span>R$ 0</span></p>
                 <p>Frete: <span>R$ 0</span></p>
                 <p>total: R$ <span class="cart-total">0</span></p>
-                <button class="finalizar-compra">Finalizar compra</button>
+                <button class="finalizar-compra bag-btn" data-id="id">Finalizar compra</button>
             </div>
         </div>
     </div>
     <!-- end of cart -->
 
-    <section class="hero-section">
-        <div class="slide active">
-            <img src="images/hero-img-1.jpg">
-            <div class="banner">
-                <div class="banner-content">
-                    <h2>
-                        <span>Coleção</span><br>
-                        <em>Verão 2021</em>
-                    </h2>
-                    <p>Até 50% OFF</p>
-                    <a href="#">Shop now</a>
-                </div>
-            </div>
+    <!-- ===================== PRODUTO ================== -->
+    <section class="produto">
+        <div class="nav-links">
+            <a href="index.html">Home |</a>
+            <a href="roupas.html">Roupas |</a>
+            <a href="#">Blusas</a>
         </div>
-        <div class="slide">
-            <img src="images/hero-img-2.jpg">
-            <div class="banner">
-                <div class="banner-content">
-                    <h2>
-                        <span>Coleção</span><br>
-                        <em>Verão 2021</em>
-                    </h2>
-                    <p>Até 50% OFF</p>
-                    <a href="#">Shop now</a>
+        <div class="container">
+            <div class="box-1">
+                <div class="galeria-produto">
+                    <ul id="vertical">
+                        <li data-thumb="images/product-11.jpeg">
+                            <img src="images/product-11.jpeg">
+                        </li>
+                        <li data-thumb="images/pexels-bia-sousa-3574779.jpg">
+                            <img src="images/pexels-bia-sousa-3574779.jpg">
+                        </li>
+                        <li data-thumb="images/pexels-bia-sousa-4155342.jpg">
+                            <img src="images/pexels-bia-sousa-4155342.jpg">
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="slide">
-            <img src="images/hero-img-3.jpg">
-            <div class="banner">
-                <div class="banner-content">
-                    <h2>
-                        <span>Novidades</span><br>
-                        <em>Moda praia</em>
-                    </h2>
-                    <p>Até 50% OFF</p>
-                    <a href="#">Shop now</a>
+            <div class="box-2">
+                <div class="titulo-produto">
+                    <h2>Top</h2>
+                    <small>cod.: 102460</small>
+                </div>
+                <div class="info-preco">
+                    <a href="#"><img src="images/icones/like_icon.png" alt="Ícone coração"></a>
+                    <span>R$ 99,99</span> | R$ 69,99<br>
+                    <small>3x R$ 21,99</small>
+                </div>
+                <div class="cor-produto">
+                    <p>Cor</p>
+                    <button class="cor"></button>
+                </div>
+                <div class="tamanho-produto">
+                    <p>Tamanho</p>
+                    <button type="button" class="active">PP</button>
+                    <button type="button">P</button>
+                    <button type="button">M</button>
+                    <button type="button">G</button>
+                </div>
+                <div class="tabela-medidas">
+                    <button>Tabela de Medidas</button>
+                </div>
+                
+                <button class="bag-btn comprar-produto" data-id="11">Adicionar à Sacola</button>
+
+                <div class="info-produto">
+                    <span onclick="mostrarInfo();">Informações <i class="fa fa-angle-down"></i></span>
+                    <hr>
+                    <p class="info">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium debitis
+                        dolorum eius quibusdam fuga qui sequi? Error asperiores dignissimos doloremque dolorum
+                        perferendis
+                        animi
+                        consectetur!
+                    </p><br>
+                    <span onclick="mostrarCaracteristicas();">Características <i class="fa fa-angle-down"></i></span>
+                    <hr>
+                    <p class="caracteristicas">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium debitis
+                        dolorum eius quibusdam fuga qui sequi? Error asperiores dignissimos doloremque dolorum
+                        perferendis
+                        animi
+                        consectetur!
+                    </p>
                 </div>
             </div>
-        </div>
-
-        <div class="navigation">
-            <div class="btn active"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-        </div>
-    </section>
-
-    <section class="categorias">
-        <h2 class="titulo">Categorias</h2>
-        <div class="produtos">
-            <div class="produto">
-                <div class="slide-img">
-                    <img src="images/categorias-2.jpg">
-                </div>
-                <div class="categoria">
-                        <h3>Tops</h3>
-                        <a href="#">Shop now</a>
-                </div>
-            </div>
-
-            <div class="produto">
-                <div class="slide-img">
-                    <img src="images/categorias-4.jpg">
-                </div>
-                <div class="categoria">
-                        <h3>Conjuntos</h3>
-                        <a href="#">Shop now</a>
-                </div>
-            </div>
-
-            <div class="produto">
-                <div class="slide-img">
-                    <img src="images/categorias-3.jpg">
-                </div>
-                <div class="categoria">
-                        <h3>Vestidos</h3>
-                        <a href="#">Shop now</a>
-                </div>
-            </div>
-
-            <div class="produto">
-                <div class="slide-img">
-                    <img src="images/categorias.jpg">
-                </div>
-                <div class="categoria">
-                    <h3>Saias</h3>
-                    <a href="#">Shop now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="banner-2">
-        <div>
-            <img src="images/banner-2-img.jpg">
-        </div>
-        <div class="banner-2-content">
-            <h2>Sale</h2>
-            <p>Confira nossas promoções em <em>Moda Praia</em></p>
-            <p>Até 50% OFF</p>
-            <a href="#">Shop Now</a>
         </div>
     </section>
 
     <section>
-        <h2 class="titulo">Mais vendidos</h2>
+        <h2 class="titulo">Você também vai gostar</h2>
         <div class="slider">
             <ul id="autoWidth" class="cs-hidden">
                 <li class="item-a">
@@ -347,7 +318,7 @@
                         </div>
                         <div class="detail-box">
                             <div class="type">
-                                <a href="#">Rabbed Cardigan</a><br>
+                                <a href="#">Jaqueta</a><br>
                                 <a href="#" class="price">R$ 99,99</a>
                             </div>
                         </div>
@@ -425,14 +396,11 @@
         </div>
     </section>
 
-    <section class="instagram"><i class="fa fa-instagram"> #URBANSTYLE</i></section>
 
     <footer>
         <div class="rodape">
             <section class="institucional">
-                <h3>Institucional
-                    <!--<i class="fa fa-angle-down"></i>-->
-                </h3>
+                <h3>Institucional<!--<i class="fa fa-angle-down"></i>--></h3>
                 <ul>
                     <li><a href="quem-somos.html">Quem somos</a></li>
                     <li>Nossas Lojas</li>
@@ -494,7 +462,6 @@
     <script src="js/lightslider.js"></script>
     <!--javascript-->
     <script src="js/funcoes.js"></script>
-    <script src="js/index.js"></script>
 </body>
 
 </html>

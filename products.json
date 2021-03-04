@@ -4,7 +4,7 @@
       "sys": { "id": "1" },
       "fields": {
         "title": "camisa de seda",
-        "price": 219.90,
+        "price": 219.99,
         "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
       }
     },
@@ -12,7 +12,7 @@
       "sys": { "id": "2" },
       "fields": {
         "title": "vestido",
-        "price": 119.90,
+        "price": 119.99,
         "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
       }
     },
@@ -20,7 +20,7 @@
       "sys": { "id": "3" },
       "fields": {
         "title": "sobretudo",
-        "price": 249.90,
+        "price": 249.99,
         "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
       }
     },
@@ -28,7 +28,7 @@
       "sys": { "id": "4" },
       "fields": {
         "title": "jaqueta",
-        "price": 229.90,
+        "price": 229.99,
         "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
       }
     },
@@ -84,7 +84,7 @@
       "sys": { "id": "11" },
       "fields": {
         "title": "top",
-        "price": 33.99,
+        "price": 69.99,
         "image": { "fields": { "file": { "url": "./images/product-11.jpeg" } } }
       }
     },

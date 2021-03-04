@@ -19,9 +19,10 @@ window.onclick = function(event) {
     }
 };
 
-// NEWSLETTER
+/* =================== NEWSLETTER ===================== */
 $(document).on('click','.newsletter-btn',function(){
     $('.mensagem-sucesso').addClass('mensagem-sucesso-active')
+    $('.esconder').addClass('esconder-form')
 });
 
 /* =================== PRODUTOS SLIDER ===================== */
@@ -35,10 +36,11 @@ $(document).ready(function() {
     });  
   });
 
-/* ==================== PÁGINA PRODUTOS =================== */
+/* ==================== PÁGINA PRODUTOS FILTRO =================== */
 function mostrarCategorias(){
   $(".categorias-tamanho").toggle()
 };
+
 /* ==================== PÁGINA PRODUTO ==================== */
 function mostrarInfo(){
     $(".info").toggle()
@@ -83,7 +85,7 @@ const cartOverlay = document.querySelector(".cart-overlay");
 const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
-const productsDOM = document.querySelector(".products-center");
+const productsDOM = document.querySelector(".produtos-container");
 // cart
 let cart = [];
 // buttons
@@ -119,8 +121,8 @@ class UI {
             <div class="slide-img">
                 <img src=${product.image}>
                 <div class="overlay">
-                    <a href="produto.html" class="buy-btn" data-id=${product.id}>Shop Now</a>
-                    <button class="bag-btn buy-btn" data-id=${product.id}>Adicionar à Sacola</button>
+                    <a href="produto-${product.id}.html" class="buy-btn" data-id=${product.id}>Shop Now</a>
+                    
                 </div>
             </div>
             <div class="detail-box">
@@ -131,7 +133,10 @@ class UI {
             </div>
             </div>`;
         });
-        productsDOM.innerHTML = result;
+        if(jQuery(".produtos-container").length>0){
+            productsDOM.innerHTML = result;
+        }
+        
     }
     getBagButtons(){
         const buttons = [...document.querySelectorAll(".bag-btn")];
