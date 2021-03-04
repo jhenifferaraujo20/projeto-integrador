@@ -64,6 +64,30 @@ $(document).ready(function() {
         controls: false
     });
 });
+/* ==================== PÁGINA DÚVIDAS FREQUENTES ==================== */
+$(document).on('click', '.mostrarInfo-1',function(){
+    $('.info-1').toggle()
+});
+
+$(document).on('click', '.mostrarInfo-2',function(){
+    $('.info-2').toggle()
+});
+
+$(document).on('click', '.mostrarInfo-3',function(){
+    $('.info-3').toggle()
+});
+
+$(document).on('click', '.mostrarInfo-4',function(){
+    $('.info-4').toggle()
+});
+
+$(document).on('click', '.mostrarInfo-5',function(){
+    $('.info-5').toggle()
+});
+
+$(document).on('click', '.mostrarInfo-6',function(){
+    $('.info-6').toggle()
+});
 
 /* ====================== SACOLA ====================== 
 $(document).on('click','.cart-btn',function(){

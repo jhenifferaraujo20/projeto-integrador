@@ -26,9 +26,10 @@
             <h1><a href="index.html">Urban Style</a></h1>
 
             <figure>
-                <a href="#" class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></a>
-                <a href="#"><img src="images/icones/like_icon.png" alt="Ícone coração"></a>
-                <a href="#" class="bag"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></a>
+                <span class="user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></span>
+                <span><img src="images/icones/like_icon.png" alt="Ícone coração"></span>
+                <span class="cart-btn"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></span>
+                <div class="cart-items">0</div>
             </figure>
         </div>
 
@@ -144,6 +145,7 @@
             </span>
             <h2>Sua Sacola</h2>
             <div class="cart-content">
+                <!--
                 <div class="cart-item">
                     <img src="">
                     <div class="item-info">
@@ -156,9 +158,10 @@
                     <div>
                         <span class="remove-item"><i class="fa fa-trash-o"></i></span>
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="cart-footer">
+                <button class="clear-cart">limpar sacola</button>
                 <div class="frete">
                     <form>
                         <label for="cep">Calcular frete</label>
@@ -169,7 +172,7 @@
                 <p>Subtotal: <span>R$ 0</span></p>
                 <p>Frete: <span>R$ 0</span></p>
                 <p>total: R$ <span class="cart-total">0</span></p>
-                <button class="finalizar-compra">Finalizar compra</button>
+                <button class="finalizar-compra bag-btn" data-id="id">Finalizar compra</button>
             </div>
         </div>
     </div>
@@ -188,47 +191,47 @@
             <strong>Dúvidas Frequentes</strong>
             <ul class="duvidas">
                 <li>
-                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Quais são as formas de pagamento
+                    <span class="mostrarInfo-1"><i class="fa fa-angle-right"></i>Quais são as formas de pagamento
                         aceitas?</span>
-                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                    <p class="info-1 info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
                         deleniti
                         quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
                         modi quisquam itaque molestias tempora, dolorum fuga!</p>
                 </li>
                 <li>
-                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Qual é o prazo de entrega?</span>
-                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                    <span class="mostrarInfo-2"><i class="fa fa-angle-right"></i>Qual é o prazo de entrega?</span>
+                    <p class="info-2 info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
                         deleniti
                         quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
                         modi quisquam itaque molestias tempora, dolorum fuga!</p>
                 </li>
                 <li>
-                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Como rastrear o meu pedido?</span>
-                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                    <span class="mostrarInfo-3"><i class="fa fa-angle-right"></i>Como rastrear o meu pedido?</span>
+                    <p class="info-3 info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
                         deleniti
                         quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
                         modi quisquam itaque molestias tempora, dolorum fuga!</p>
                 </li>
                 <li>
-                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Posso alterar o endereço de
+                    <span class="mostrarInfo-4"><i class="fa fa-angle-right"></i>Posso alterar o endereço de
                         entrega?</span>
-                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                    <p class="info-4 info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
                         deleniti
                         quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
                         modi quisquam itaque molestias tempora, dolorum fuga!</p>
                 </li>
                 <li>
-                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Como realizar a troca ou a devolução
+                    <span class="mostrarInfo-5"><i class="fa fa-angle-right"></i>Como realizar a troca ou a devolução
                         de um produto?</span>
-                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                    <p class="info-5 info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
                         deleniti
                         quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
                         modi quisquam itaque molestias tempora, dolorum fuga!</p>
                 </li>
                 <li>
-                    <span onclick="mostrarInfo();"><i class="fa fa-angle-right"></i>Como alterar dados da minha
+                    <span class="mostrarInfo-6"><i class="fa fa-angle-right"></i>Como alterar dados da minha
                         conta?</span>
-                    <p class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
+                    <p class="info-6 info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt accusamus
                         deleniti
                         quidem, cum voluptatibus! Quibusdam illo corporis voluptatum adipisci in dignissimos laboriosam,
                         modi quisquam itaque molestias tempora, dolorum fuga!</p>
