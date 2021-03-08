@@ -19,6 +19,32 @@ window.onclick = function(event) {
     }
 };
 
+/* =================== MENU ===================== */
+$(document).on('click','#bt-menu',function(){
+    $('.navbar, .menu').addClass('showNavbar')
+});
+
+$(document).on('click','.fechar-menu',function(){
+    $('.navbar').removeClass('showNavbar')
+});
+
+
+$(document).on('click','.roupas-btn',function(){
+    $('.roupas').toggle()
+});
+
+$(document).on('click','.praia-btn',function(){
+    $('.praia').toggle()
+});
+
+$(document).on('click','.calcados-btn',function(){
+    $('.calcados').toggle()
+});
+
+$(document).on('click','.acessorios-btn',function(){
+    $('.acessorios').toggle()
+});
+
 /* =================== NEWSLETTER ===================== */
 $(document).on('click','.newsletter-btn',function(){
     $('.mensagem-sucesso').addClass('mensagem-sucesso-active')

@@ -36,11 +36,14 @@
         <input type="checkbox" id="bt-menu">
         <label for="bt-menu">&#9776;</label>
         <nav class="navbar">
-            <ul>
+            <ul class="menu">
+                <li><button class="fechar-menu"><i class="fa fa-times"></i></button></li>
                 <li><a href="#">NEW IN</a></li>
                 <li class="dropdown"><a href="roupas.html" class="dropbtn">ROUPAS</a>
+                    <i class="fa fa-angle-down roupas-btn"></i>
+                    <hr>
                     <div class="dropdown-content">
-                        <div class="opcoes-menu">
+                        <div class="opcoes-menu roupas">
                             <a href="#">Blusas</a>
                             <a href="#">Vestidos</a>
                             <a href="#">Macacões</a>
@@ -57,8 +60,10 @@
                     </div>
                 </li>
                 <li class="dropdown"><a href="#" class="dropbtn">MODA PRAIA</a>
+                    <i class="fa fa-angle-down praia-btn"></i>
+                    <hr>
                     <div class="dropdown-content">
-                        <div class="opcoes-menu">
+                        <div class="opcoes-menu praia">
                             <a href="#">Biquínes</a>
                             <a href="#">Maiôs</a>
                             <a href="#">Saídas de praia</a>
@@ -70,8 +75,10 @@
                     </div>
                 </li>
                 <li class="dropdown"><a href="#" class="dropbtn">CALÇADOS</a>
+                    <i class="fa fa-angle-down calcados-btn"></i>
+                    <hr>
                     <div class="dropdown-content">
-                        <div class="opcoes-menu">
+                        <div class="opcoes-menu calcados">
                             <a href="#">Rasteira</a>
                             <a href="#">Scarpin</a>
                             <a href="#">Tênis</a>
@@ -84,8 +91,10 @@
                     </div>
                 </li>
                 <li class="dropdown"><a href="#" class="dropbtn">ACESSÓRIOS</a>
+                    <i class="fa fa-angle-down acessorios-btn"></i>
+                    <hr>
                     <div class="dropdown-content">
-                        <div class="opcoes-menu">
+                        <div class="opcoes-menu acessorios">
                             <a href="#">Bolsas</a>
                             <a href="#">Carteiras</a>
                             <a href="#">Óculos</a>
@@ -262,7 +271,7 @@
                 <p>Cadastre-se e receba nossas novidades e promoções.</p>
                 <form class="esconder">
                     <input type="email" name="email" placeholder="E-mail" required>
-                    <button class="newsletter-btn">Cadastrar</button>
+                    <button type="button" class="newsletter-btn">Cadastrar</button>
                 </form>
                 <p class="mensagem-sucesso">CADASTRO REALIZADO COM SUCESSO<br>
                     Em breve você receberá nossas promoções e novidades exclusivas.</p>
