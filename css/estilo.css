@@ -1239,6 +1239,11 @@ footer {
 
 /* ==================== RESPONSIVE ==================== */
 
+@media screen and (max-width: 630px) {
+  .lista-desejos {
+    display: none;
+  }
+}
 @media screen and (max-width: 922px) {
   .cabecalho input {
     width: 100%;
@@ -1355,6 +1360,17 @@ footer {
   .banner {
     top: 47px;
     display: none;
+  }
+  .container {
+    display: block;
+  }
+  .box-1 {
+    width: 100%;
+   
+  }
+  .box-2 {
+    text-align: center;
+    margin: 25px 130px;
   }
   .rodape {
     display: block;
