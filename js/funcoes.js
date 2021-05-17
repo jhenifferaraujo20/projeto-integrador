@@ -171,7 +171,7 @@ class UI {
             <div class="slide-img">
                 <img src=${product.image}>
                 <div class="overlay">
-                    <a href="produto-${product.id}.html" class="buy-btn" data-id=${product.id}>Shop Now</a>
+                    <a href="produto-${product.id}.php" class="buy-btn" data-id=${product.id}>Shop Now</a>
                     
                 </div>
             </div>
