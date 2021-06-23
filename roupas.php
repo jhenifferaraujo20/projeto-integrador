@@ -1,14 +1,17 @@
-<?php include "cabecalho.php" ?>
+<?php 
+include "cabecalho.php"; 
+include "conexao.php";
+?>
 
     <section class="cabecalho-pagina-produtos">
         <!--<img src="images/banner-roupas.jpg">-->
-        <div class="nav-links">
+        <div class="nav-links mt-4 ms-5">
             <a href="index.php">Home |</a>
             <a href="roupas.php">Roupas</a>
         </div>
         <div class="filtro-ordenar">
             <div class="filtro">
-                <span onclick="mostrarCategorias();">Filtrar por <i class="fa fa-angle-down"></i></span>
+                <span onclick="mostrarCategorias();">Filtrar por <i class="bi bi-chevron-down"></i></span>
                 <div class="categorias-tamanho">
                     <div class="row">
                         <div class="col-1">
@@ -53,21 +56,27 @@
         </div>
     </section>
 
-    <section class="produtos-container">
-    <!--<div class="produto">
-            <div class="slide-img">
-                <img src="images/slide-img-1.jpg">
-                <div class="overlay">
-                    <a href="camisa-de-seda.php" class="buy-btn">Shop Now</a>
-                </div>
-            </div>
-            <div class="detail-box">
-                <div class="type">
-                    <a href="#">Camisa de seda</a><br>
-                    <a href="#" class="price">R$ 159,99</a>
-                </div>
-            </div>
-        </div>-->
-    </section>
+    
+    <?php 
+    $sqlBusca = "SELECT * FROM produtos WHERE tipo = 'roupas';";
+    $listaDeProdutos = mysqli_query($conexao, $sqlBusca);
+    ?>
+    <div class="container-fluid">
+        <div class="row">
+            <?php
+            while($produto = mysqli_fetch_assoc($listaDeProdutos)) {
+                echo "<div class='col-sm-2 col-md-3'>";
+                echo    "<div class='slide-img'>";
+                echo        "<a title='{$produto['nome']}' href='produto.php?id_produto={$produto['id']}'><img src='{$produto['foto_1']}'></a>";
+                echo    "</div>";
+                echo    "<div class='detail-box ps-2'>";
+                echo        "<a href='produto.php?id_produto={$produto['id']}' class='text-uppercase'>{$produto['nome']}</a><br>";
+                echo        "R$ {$produto['preco']}";
+                echo    "</div>";
+                echo "</div>";
+            }
+            ?>
+        </div>
+    </div>
 
 <?php include "rodape.php" ?>

@@ -1,53 +1,35 @@
 <?php include "cabecalho.php" ?>
 
-    <section>
-        <div class="sobre-nos-background">
-            <div class="produtos">
-                <div class="slide-img">
-                    <img src="images/categorias-2.jpg">
-                </div>
-                <div class="slide-img">
-                    <img src="images/categorias-4.jpg">
-                </div>
-                <div class="slide-img">
-                    <img src="images/categorias-3.jpg">
-                </div>
-                <div class="slide-img">
-                    <img src="images/categorias.jpg">
-                </div>
+    <section class="container">
+        <div class="row text-center mt-5 mb-5">
+            <div class="col-lg-5 slide-img">
+                <img src="images/sobre-img2.jpg" alt="">
+            </div>
+            <div class="col-12 col-lg-6 align-self-center">
+                <h2 class="text-uppercase fs-4">A marca</h2>
+                <p>Criado pelas amigas, Agnes Crocchi, Lucinda Aziz e Vânia Almeida, a J'adore Boutique brilha na moda nacional há mais de 9 anos.</p>
+                <p>Com um trabalho que privilegia a sofisticação e a contemporaneidade, nosso produto se destaca pelo acabamento e modelagem únicos, além do uso de tecidos nobres e bordados.</p>
             </div>
         </div>
-        <div class="sobre-nos">
-            <h2>Sobre Nós</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum obcaecati sit magnam fugit! Quia
-                consequatur
-                explicabo ab cupiditate adipisci excepturi error distinctio, nulla maxime necessitatibus nostrum eius
-                quasi
-                iste vel.
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ratione cum quo nisi libero aspernatur
-                quibusdam quidem impedit assumenda vel, rerum dignissimos, pariatur recusandae iusto in a? Iusto, iste
-                ipsam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur recusandae voluptates
-                temporibus dicta earum ut nisi labore illum possimus placeat perferendis ab esse eaque incidunt nihil,
-                eos sit ipsa praesentium?
-            </p>
-        </div>
-        <div class="colecao">
-            <img src="images/sobre-img1.jpg" alt="modelos">
-            <div class="categoria">
-                <h2>Lançamentos frequentes</h2>
+
+        <div class="row text-center mb-5">
+            <div class="col-12 col-lg-6 align-self-center">
+                <h2 class="text-uppercase fs-4">Lançamentos frequentes</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sequi! Voluptatum, nulla alias?
-                    Numquam consectetur, veniam quae quidem deserunt atque, cupiditate magnam ea cumque laboriosam
-                    incidunt mollitia eaque? Obcaecati, nulla?
+                    Na J'adore Boutique você encontra lançamentos frequentes, alinhados às últimas tendências de moda. 
                 </p>
-                <a href="#">Shop Now</a>
+                <p>
+                    A equipe de desenvolvimento e criação se 
+                    mantém constantemente atualizada para oferecer produtos práticos, de qualidade e com informação de moda. E tudo isso, em uma plataforma super segura.
+                </p>
+                <a href="roupas.php" class="btn">Comprar</a>
+            </div>
+            <div class="col-lg-5 slide-img">
+                <img src="images/sobre-img1.jpg" alt="">
             </div>
         </div>
     </section>
 
-    <section class="instagram"><i class="fa fa-instagram"> #URBANSTYLE</i></section>
+    <section class="container text-center instagram"><i class="fa fa-instagram"> #J'adore Boutique</i></section>
 
 <?php include "rodape.php" ?>
