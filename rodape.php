@@ -13,17 +13,17 @@
                 <section class="col-md-4 col-lg-2">
                     <h3 class="text-uppercase">Atendimento</h3>
                     <ul>
-                        <li><a href="contato.php">Fale Conosco</a></li>
-                        <li><a href="troca.php">Política de Troca</a></li>
-                        <li><a href="privacidade.php">Política de Privacidade</a></li>
-                        <li><a href="duvidas.php">Dúvidas Frequentes</a></li>
+                        <li><a href="atendimento.php">Fale Conosco</a></li>
+                        <li><a href="atendimento.php">Política de Troca</a></li>
+                        <li><a href="atendimento.php">Política de Privacidade</a></li>
+                        <li><a href="atendimento.php">Dúvidas Frequentes</a></li>
                     </ul>
                 </section>
 
                 <section class="col-md-4 col-lg-2">
                     <h3 class="text-uppercase">Minha Conta</h3>
                     <ul>
-                        <li>Meus pedidos</li>
+                        <li><a href="minha-conta.php">Meus pedidos</a></li>
                         <li><a href="minha-conta.php">Minha Conta</a></li>
                     </ul>
                 </section>
@@ -74,5 +74,27 @@
     <script src="slick/slick.js"></script>
     <!--javascript-->
     <script src="js/funcoes.js"></script>
+    <?php
+    if(isset($_GET['mensagem'])):
+        if($_GET['mensagem'] == 'invalido' || $_GET['mensagem'] == 'login'):
+    ?>
+    <script>
+        $(document).ready(function(){
+            $("#botao-login").trigger("click");
+        });    
+    </script>
+    <?php
+        endif;
+        if($_GET['mensagem'] == 'email_existe' || $_GET['mensagem'] == 'cadastro_efetuado'):
+    ?>
+    <script>
+        $(document).ready(function(){
+            $("#botao-cadastro").trigger("click");
+        });    
+    </script>
+    <?php
+        endif;
+    endif;
+    ?>
 </body>
 </html>

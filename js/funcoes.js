@@ -1,23 +1,25 @@
 /* ==================== LOGIN/ CADASTRO ==================== */
-$(document).on('click','.user,.voltarlogin',function(){
+$(function(){
+  $(document).on('click','.user,.voltarlogin',function(){
     $('.modal-login-cadastro').addClass('login-active').removeClass('cadastro-active')
-});
+  });
 
-$(document).on('click', '.cadastro',function(){
-    $('.modal-login-cadastro').addClass('cadastro-active').removeClass('login-active')
-});
+  $(document).on('click', '.cadastro',function(){
+      $('.modal-login-cadastro').addClass('cadastro-active').removeClass('login-active')
+  });
 
-$(document).on('click', '.fechar-login',function(){
-    $('.modal-login-cadastro').removeClass('login-active').removeClass('cadastro-active')
-});
+  $(document).on('click', '.fechar-login',function(){
+      $('.modal-login-cadastro').removeClass('login-active').removeClass('cadastro-active')
+  });
 
-let modal = document.querySelector(".modal-login-cadastro");
-window.onclick = function(event) {
-    if(event.target == modal) {
-        modal.classList.remove("login-active");
-        modal.classList.remove("cadastro-active");
-    }
-};
+  let modal = document.querySelector(".modal-login-cadastro");
+  window.onclick = function(event) {
+      if(event.target == modal) {
+          modal.classList.remove("login-active");
+          modal.classList.remove("cadastro-active");
+      }
+  };
+});
 
 /* =================== MENU ===================== */
 $(document).on('click','#bt-menu',function(){
@@ -82,9 +84,9 @@ $('.slick').slick({
 });
 
 /* ==================== PÁGINA PRODUTOS FILTRO =================== */
-function mostrarCategorias(){
-  $(".categorias-tamanho").toggle()
-};
+$(document).on('click','.filtro-btn',function(){
+  $('.showFiltro').toggle()
+});
 
 /* ==================== PÁGINA PRODUTO SLIDER VERTICAL  ==================== */
 $('.slider-for').slick({
@@ -116,23 +118,25 @@ $('.slider-nav').slick({
 });
 
 /* ====================== SACOLA ====================== */
-$(document).on('click','.cart-btn, .bag-btn',function(){
-  $('.cart-overlay, .cart').addClass('transparentBcg, showCart')
-});
-
-$(document).on('click','.close-cart',function(){
-  $('.cart, .cart-overlay').removeClass('showCart')
-});
-
-let overlay = document.querySelector(".cart-overlay");
-let cart = document.querySelector(".cart");
-window.onclick = function(event) {
-    if(event.target == overlay) {
-        overlay.classList.remove("showCart");
-        cart.classList.remove("showCart");
-    }
-};
-
-$(document).ready(function() {
-
+$(function(){
+  $(document).on('click','.cart-btn, .bag-btn',function(){
+    $('.cart-overlay, .cart').addClass('transparentBcg, showCart')
+  });
+  
+  $(document).on('click','.close-cart',function(){
+    $('.cart, .cart-overlay').removeClass('showCart')
+  });
+  
+  /*let overlay = document.querySelector(".cart-overlay");
+  let cart = document.querySelector(".cart");
+  window.onclick = function(event) {
+      if(event.target == overlay) {
+          overlay.classList.remove("showCart");
+          cart.classList.remove("showCart");
+      }
+  };*/
+  
+  $(document).ready(function() {
+  
+  });
 });

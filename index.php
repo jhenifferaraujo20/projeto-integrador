@@ -32,7 +32,7 @@
     <section class="categorias container mt-5 mb-5">
         <div class="row text-center">
             <div class="col-md-12">
-            <h2 class="text-uppercase fs-3">Categorias</h2>
+            <h2 class="text-uppercase fs-3 titulo">Categorias</h2>
             </div>
         </div>
     
@@ -79,8 +79,8 @@
         </div>
     </section>
 
-    <section class="container-fluid">
-        <div class="banner-2 row justify-content-center">
+    <section class="container-fluid p-0">
+        <!--<div class="banner-2 row justify-content-center">
             <div class="col-md-5 text-center">
                 <img src="images/banner-2-img.jpg">
             </div>
@@ -90,11 +90,12 @@
                 <p>Até 50% OFF</p>
                 <a href="roupas.php" class="btn">Comprar</a>
             </div>
-        </div>
+        </div>-->
+        <img src="images/banne-1.jpg" width="100%" alt="">
     </section>
     
     <section class="container mt-5 mb-5">
-        <h2 class="text-center text-uppercase fs-3">Mais vendidos</h2>
+        <h2 class="text-center text-uppercase fs-3 titulo">Mais vendidos</h2>
         <div class="slick">
             <div class="box">
                 <div class="slide-img">

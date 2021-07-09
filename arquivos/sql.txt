@@ -1,0 +1,77 @@
+CREATE TABLE `loja_jadore`.`administrador` ( `id` INT NOT NULL AUTO_INCREMENT , `email` VARCHAR(80) NOT NULL , `senha` VARCHAR(32) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `loja_jadore`.`itens_pedido` ( `id` INT NOT NULL AUTO_INCREMENT , `id_produto` INT NOT NULL , `quantidade` INT NOT NULL , `id_pedido` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `loja_jadore`.`pedidos` ( `id` INT NOT NULL AUTO_INCREMENT , `data` DATE NOT NULL , `id_cliente` INT NOT NULL , `valor_total` FLOAT(7,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `loja_jadore`.`subcategorias` ( `id` INT NOT NULL AUTO_INCREMENT , `subcategoria` VARCHAR(30) NOT NULL , `id_categoria_pai` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `loja_jadore`.`categorias` ( `id` INT NOT NULL AUTO_INCREMENT , `categoria` VARCHAR(30) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `loja_jadore`.`produtos` ( `id` INT NOT NULL AUTO_INCREMENT , `nome` VARCHAR(150) NOT NULL , `preco` FLOAT(6,2) NOT NULL , `preco_antigo` FLOAT(6,2) NOT NULL , `descricao` TEXT NOT NULL , `cor` VARCHAR(100) NOT NULL , `tamanho` VARCHAR(5) NOT NULL , `id_categoria` INT NOT NULL , `id_subcategoria` INT NOT NULL , `quantidade_estoque` INT NOT NULL , `fotos` VARCHAR(200) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `loja_jadore`.`clientes` ( `id` INT NOT NULL AUTO_INCREMENT , `nome_completo` VARCHAR(80) NOT NULL , `cpf` VARCHAR(14) NOT NULL , `data_nascimento` DATE NOT NULL , `telefone` VARCHAR(20) NOT NULL , `email` VARCHAR(80) NOT NULL , `senha` VARCHAR(32) NOT NULL , `data_cadastro` DATE NOT NULL , `cep` VARCHAR(9) NOT NULL , `rua` VARCHAR(80) NOT NULL , `numero_casa` INT NOT NULL , `bairro` VARCHAR(80) NOT NULL , `cidade` VARCHAR(80) NOT NULL , `estado` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+ALTER TABLE `subcategorias` ADD CONSTRAINT `fk_subcategorias_id_categoria` FOREIGN KEY ( `id_categoria_pai` ) REFERENCES `categorias` ( `id` );
+ 
+ALTER TABLE `produtos` ADD CONSTRAINT `fk_produtos_id_categoria` FOREIGN KEY ( `id_categoria` ) REFERENCES `categorias` ( `id` );
+
+ALTER TABLE `produtos` ADD CONSTRAINT `fk_produtos_id_subcategoria` FOREIGN KEY ( `id_subcategoria` ) REFERENCES `subcategorias` ( `id` );
+
+ALTER TABLE `pedidos` ADD CONSTRAINT `fk_pedidos_id_cliente` FOREIGN KEY ( `id_cliente` ) REFERENCES `clientes` ( `id` );
+
+ALTER TABLE `itens_pedido` ADD CONSTRAINT `fk_itens_pedido_id_produto` FOREIGN KEY (`id_produto`) REFERENCES `produtos`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `itens_pedido` ADD CONSTRAINT `fk_itens_pedido_id_pedido` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+INSERT INTO `categorias`(`categoria`) VALUES ('Roupas');
+
+INSERT INTO `categorias`(`categoria`) VALUES ('Moda Praia');
+
+INSERT INTO `categorias`(`categoria`) VALUES ('Calçados');
+
+INSERT INTO `categorias`(`categoria`) VALUES ('Acessórios');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Blusas','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Vestidos','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Macacão','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Camisas','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Jaquetas','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Saias','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Shorts','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Calças','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Body','1');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Biquínis','2');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Maiôs','2');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Saída de Praia','2');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Bolsas','2');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Rasteiras','3');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Scarpins','3');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Sandálias','3');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Tênis','3');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Botas','3');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Bolsas','4');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Carteiras','4');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Óculos','4');
+
+INSERT INTO `subcategorias`(`subcategoria`, `id_categoria_pai`) VALUES ('Cintos','4');

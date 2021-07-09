@@ -8,27 +8,26 @@ include "conexao.php"; ?>
     $sqlBusca = "SELECT * FROM produtos WHERE id={$id_produto};";
     $listaDeProdutos = mysqli_query($conexao, $sqlBusca);
     $produto = mysqli_fetch_assoc($listaDeProdutos);
+    $fotos = explode(',',$produto['fotos']);
 
     ?>
     <section class="container">
         <div class="nav-links">
-            <a href="index.php">Home |</a>
-            <a href="roupas.php">Roupas |</a>
-            <a href="#">Camisas</a>
+        
         </div>
         <div class="row mt-5">
             <div class="col-lg-2">
                 <div class="slider-nav">
                     <div class="thumbImg">
-                        <img src='<?php echo "{$produto['foto_1']}";?>'>
+                        <img src='<?php echo "{$fotos[0]}";?>'>
                     </div>
 
                     <div class="thumbImg">
-                        <img src='<?php echo "{$produto['foto_2']}";?>'>
+                        <img src='<?php echo "{$fotos[1]}";?>'>
                     </div>
 
                     <div class="thumbImg">
-                        <img src='<?php echo "{$produto['foto_3']}";?>'>
+                        <img src='<?php echo "{$fotos[2]}";?>'>
                     </div>
                 </div>
             </div>
@@ -36,15 +35,15 @@ include "conexao.php"; ?>
             <div class="col-md-12 col-lg-5 me-5 ps-0">
                 <div class="slider-for">
                     <div class="slick-vertical-img">
-                        <img src='<?php echo "{$produto['foto_1']}";?>'>
+                        <img src='<?php echo "{$fotos[0]}";?>'>
                     </div>
 
                     <div class="slick-vertical-img">
-                        <img src='<?php echo "{$produto['foto_2']}";?>' class="ps-0">
+                        <img src='<?php echo "{$fotos[1]}";?>' class="ps-0">
                     </div>
 
                     <div class="slick-vertical-img">
-                        <img src='<?php echo "{$produto['foto_3']}";?>'>
+                        <img src='<?php echo "{$fotos[2]}";?>'>
                     </div>
                 </div>
             </div>
@@ -65,7 +64,7 @@ include "conexao.php"; ?>
                     
                 <div class="mt-4">
                     <p class="mb-0">Cor</p>
-                    <button class="cor btn"><?php echo "<img src='{$produto['cor']}' width='20'>";?></button>
+                    <a class="cor btn" href='<?php echo "produto.php?id_produto={$produto['id']}";?>'><?php echo "<img src='{$produto['cor']}' width='20'>";?></a>
                 </div>
 
                 <div class="tamanho-produto mt-4">

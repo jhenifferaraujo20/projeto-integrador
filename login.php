@@ -15,11 +15,10 @@ $row = mysqli_num_rows($result);
 if($row == 1) {
     $usuario_bd = mysqli_fetch_assoc($result);
     $_SESSION['email'] = $usuario_bd['email'];
-    header('Location: minha-conta.php');
+    header("Location: minha-conta.php?id={$usuario_bd['id']}");
     exit();
 }else {
-    $_SESSION['nao_autenticado'] = true;
-    header('Location: index.php');
+    header('Location: index.php?mensagem=invalido');
     exit();
 }
 

@@ -2,7 +2,7 @@
 session_start();
 include "conexao.php";
 
-$nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
+$nome = mysqli_real_escape_string($conexao, trim($_POST['nome_completo']));
 $cpf = mysqli_real_escape_string($conexao, trim($_POST['cpf']));
 $telefone = mysqli_real_escape_string($conexao, trim($_POST['telefone']));
 $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
@@ -13,18 +13,16 @@ $resultado = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($resultado);
 
 if($row['total'] == 1) {
-    $_SESSION['email_existe'] = true;
-    header('Location: index.php');
+    header('Location: index.php?mensagem=email_existe');
     exit;
 }
 
-$sql = "INSERT INTO clientes (nome, cpf, telefone, email, senha, data_cadastro) 
-        VALUES ('$nome', '$cpf', '$telefone', '$email', '$senha', NOW())
+$sql = "INSERT INTO clientes (nome_completo, cpf, telefone, email, senha) 
+        VALUES ('$nome', '$cpf', '$telefone', '$email', '$senha')
         ";
 
 if($conexao->query($sql) === TRUE) {
-    $_SESSION['status_cadastro'] = true;
-    header('Location: index.php');
+    header('Location: index.php?mensagem=cadastro_efetuado');
     exit;
 }
 

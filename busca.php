@@ -18,13 +18,15 @@ $query->execute();
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <div class="container-fluid">
-    <div class="resultado row">
+    <?php echo "<div class='mt-5'><h2 class='fs-4'>Sua busca: {$_GET['buscar']}</h2></div>"; ?>
+    <div class="row mt-4">
         <?php
         if(count($result)) {
             foreach($result as $row) {
+                $fotos = explode(',',$row['fotos']);
                 echo "<div class='col-sm-2 col-md-3'>";
                 echo    "<div class='slide-img'>";
-                echo        "<a href='produto.php?id_produto={$row['id']}'><img src='{$row['foto_1']}'></a>";
+                echo        "<a href='produto.php?id_produto={$row['id']}'><img src='{$fotos[0]}'></a>";
                 echo    "</div>";
                 echo    "<div class='detail-box ps-2'>";
                 echo        "<a href='produto.php?id_produto={$row['id']}' class='text-uppercase'>{$row['nome']}</a><br>";
@@ -33,7 +35,7 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
                 echo "</div>";
             }
         }else {
-            echo "<div class='sem-resultado text-center'>Não encontramos resultados pelo  termo buscado.</div>";
+            echo "<div class='m-5 text-center'>Não encontramos resultados pelo  termo buscado.</div>";
         }
         ?>
     </div>

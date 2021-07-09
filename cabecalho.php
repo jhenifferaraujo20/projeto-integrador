@@ -1,13 +1,10 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Style</title>
+    <title>J'adore Boutique</title>
     <!--fonte-adobe-->
     <link rel="stylesheet" href="https://use.typekit.net/ndt6lhf.css">
     <!--font-awesome-->
@@ -27,22 +24,22 @@ session_start();
     <main class="container-fluid p-0">
         <header>
             <div class="container-fluid m-0 p-0 mt-2 mb-3">
-                <div class="row pt-3 justify-content-evenly">
-                    <div class="col ms-4">
+                <div class="row justify-content-evenly cabecalho">
+                    <div class="col ms-4 pt-4">
                         <form method="GET" action="busca.php">
                             <input type="search" id="busca" name="buscar" placeholder="Buscar...">
-                            <button type="submit" class="btn"><img src="images/icones/search-icon.png"></button>
+                            <button type="submit" class="btn search-btn"><img src="images/icones/search-icon.png" width="26"></button>
                         </form>
                     </div>
 
                     <div class="col text-center">
-                        <h1><a href="index.php">J'adore Boutique</a></h1>
+                        <a href="index.php"><img src="images/logo_2.jpg" width="280" alt=""></a>
                     </div>
 
-                    <div class="col text-end me-3">
-                        <button type="button" class="btn user"><img src="images/icones/user-icon.png" alt="Ícone usuário"></button>
-                        <button type="button" class="btn lista-desejos"><img src="images/icones/like_icon.png" alt="Ícone coração"></button>
-                        <button type="button" class="btn cart-btn"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras"></button>
+                    <div class="col text-end me-3 pt-4">
+                        <button type="button" class="btn user" id="botao-login"><img src="images/icones/user-icon.png" alt="Ícone usuário" width="28"></button>
+                        <a href="minha-conta.php" class="btn lista-desejos"><img src="images/icones/like_icon.png" alt="Ícone coração" width="28"></a>
+                        <button type="button" class="btn cart-btn"><img src="images/icones/bag_icon.png" alt="Ícone sacola de compras" width="28"></button>
                         <div class="cart-items text-center">0</div>
                     </div>
                 </div>
@@ -50,11 +47,11 @@ session_start();
 
             <input type="checkbox" id="bt-menu">
             <label for="bt-menu">&#9776;</label>
-            <nav class="barra-navegacao">
+            <nav class="barra-navegacao text-uppercase">
                 <ul class="menu">
-                    <li><button class="fechar-menu"><i class="bi bi-x"></i></button></li>
-                    <li><a href="#">NEW IN</a></li>
-                    <li class="item-dropdown"><a href="roupas.php" class="dropbtn">ROUPAS</a>
+                    <li><button class="btn fechar-menu"><i class="bi bi-x"></i></button></li>
+                    <li><a href="produtos.php">NOVIDADES</a></li>
+                    <li class="item-dropdown"><a href="produtos.php?categoria=Roupas" class="dropbtn">ROUPAS</a>
                         <i class="bi bi-chevron-down roupas-btn"></i>
                         
                         <div class="dropdown-content">
@@ -79,38 +76,38 @@ session_start();
                             </div>
                         </div>
                     </li>
-                    <li class="item-dropdown"><a href="#" class="dropbtn">MODA PRAIA</a>
+                    <li class="item-dropdown"><a href="produtos.php?categoria=Praia" class="dropbtn">MODA PRAIA</a>
                         <i class="bi bi-chevron-down praia-btn"></i>
                         
                         <div class="dropdown-content">
                             <div class="opcoes-menu praia">
-                                <a href="#">Biquínes</a>
+                                <a href="#">Biquínis</a>
                                 <a href="#">Maiôs</a>
                                 <a href="#">Saídas de praia</a>
-                                <a href="#">Plus Size</a>
+                                <a href="#">Bolsas</a>
                             </div>
                             <div class="img-menu">
                                 <img src="images/praia-img-menu1.jpg">
                             </div>
                         </div>
                     </li>
-                    <li class="item-dropdown"><a href="#" class="dropbtn">CALÇADOS</a>
+                    <li class="item-dropdown"><a href="produtos.php?categoria=Calçados" class="dropbtn">CALÇADOS</a>
                         <i class="bi bi-chevron-down calcados-btn"></i>
                         
                         <div class="dropdown-content">
                             <div class="opcoes-menu calcados">
-                                <a href="#">Rasteira</a>
-                                <a href="#">Scarpin</a>
+                                <a href="#">Rasteiras</a>
+                                <a href="#">Scarpins</a>
+                                <a href="#">Sandálias</a>
                                 <a href="#">Tênis</a>
-                                <a href="#">Sandália</a>
-                                <a href="#">Coturno</a>
+                                <a href="#">Botas</a>
                             </div>
                             <div class="img-menu">
                                 <img src="images/shoes.jpg">
                             </div>
                         </div>
                     </li>
-                    <li class="item-dropdown"><a href="#" class="dropbtn">ACESSÓRIOS</a>
+                    <li class="item-dropdown"><a href="produtos.php?categoria=Acessórios" class="dropbtn">ACESSÓRIOS</a>
                         <i class="bi bi-chevron-down acessorios-btn"></i>
                         
                         <div class="dropdown-content">
@@ -129,12 +126,8 @@ session_start();
             </nav>
         </header>
 
-        <div class="container-fluid">
-            <div class="resultado row"></div>
-        </div>
-
         <div class="modal-login-cadastro">
-            <div class="modal-login">
+            <div class="modal-login pt-0">
                 <div class="row justify-content-end">
                     <div class="col-md-2">
                         <button class="btn fechar-login"><i class="bi bi-x"></i></button>
@@ -146,6 +139,7 @@ session_start();
                         <h2 class="text-uppercase">Login</h2>
                     </div>
                 </div>
+
                 <?php
                 if(isset($_GET['mensagem'])){
                     if($_GET['mensagem'] == 'invalido'){
@@ -154,22 +148,22 @@ session_start();
                             </div>";
                     }else if($_GET['mensagem'] == 'login'){
                         echo "<div class='alert alert-warning' role='alert'>
-                                ERRO: Acesso negado. Efetue login para continuar.
+                                ERRO: Efetue login para continuar.
                             </div>";
                     }
                 }
                 ?>
-
+                
                 <form action="login.php" method="POST">
                     <div class="row mb-3 justify-content-center">
                         <div class="col-11">
-                            <input id="email" type="email" name="email" placeholder="E-mail" class="form-control" maxlength="50" required>
+                            <input id="emailLogin" type="email" name="email" placeholder="E-mail" class="form-control" maxlength="50" required>
                         </div>
                     </div>
                    
                     <div class="row justify-content-center">
                         <div class="col-11">
-                            <input id="senha" type="password" name="senha" placeholder="Senha" class="form-control" maxlength="8" required>
+                            <input id="senhaLogin" type="password" name="senha" placeholder="Senha" class="form-control" maxlength="8" required>
                         </div>
                     </div>
 
@@ -187,13 +181,13 @@ session_start();
 
                     <div class="row text-center">
                         <div class="col-12">
-                            <button type="button" class="btn cadastro">Ainda não tem conta? Cadastre-se</button>
+                            <button type="button" class="btn cadastro" id="botao-cadastro">Ainda não tem conta? Cadastre-se</button>
                         </div>
                     </div>
                 </form>
             </div>
 
-            <div class="modal-cadastro">
+            <div class="modal-cadastro pt-0">
                 <div class="row justify-content-end">
                     <div class="col-2">
                         <button class="btn fechar-login"><i class="bi bi-x"></i></button>
@@ -205,32 +199,25 @@ session_start();
                         <h2 class="text-uppercase">Cadastre-se</h2>
                     </div>
                 </div>
-                <?php 
-                    if(isset($_SESSION['status_cadastro'])):
-                    ?>
-                    <div class="alert alert-success">
-                      <p>Cadastro efetuado!</p>
-                      <p>Faça login informando o seu usuário e senha <button type="button" class="btn voltarlogin">aqui</button></p>
-                    </div>
-                    <?php
-                    endif;
-                    unset($_SESSION['status_cadastro']);
-                    ?>
-                    <?php
-                    if(isset($_SESSION['email_existe'])):
-                    ?>
-                    <div class="alert alert-danger">
-                        <p>O email escolhido já existe. Informe outro e tente novamente.</p>
-                    </div>
-                    <?php
-                    endif;
-                    unset($_SESSION['email_existe']);
-                    ?>
+
+                <?php
+                if(isset($_GET['mensagem'])){
+                    if($_GET['mensagem'] == 'email_existe'){
+                        echo "<div class='alert alert-danger' role='alert'>
+                                ERRO: O email informado já existe.
+                            </div>";
+                    }else if($_GET['mensagem'] == 'cadastro_efetuado'){
+                        echo "<div class='alert alert-success' role='alert'>
+                                Cadastro efetuado com sucesso. <span class='btn voltarlogin'>Clique aqui</span> e faça login.
+                            </div>";
+                    }
+                }
+                ?>
                         
                 <form action="cadastro.php" method="POST">
                     <div class="row mb-3 justify-content-center">
                         <div class="col-11">
-                            <input type="text" name="nome" id="nome" placeholder="Nome completo" class="form-control" maxlength="50" required>
+                            <input type="text" name="nome_completo" id="nome" placeholder="Nome completo" class="form-control" maxlength="50" required>
                         </div>
                     </div>
 
@@ -295,7 +282,7 @@ session_start();
                             <span>produto</span><br>
                             <span>R$219,99</span><br>
                             <i class="fa fa-minus"></i>
-                            <p class="item-amount">1</p>
+                                <p class="item-amount">1</p>
                             <i class="fa fa-plus"></i>
                         </div>
                         <div>
@@ -338,19 +325,7 @@ session_start();
                         <span class="col-3 cart-total">0</span>
                     </div>
     
-                    <button class="btn btn-dark finalizar-compra text-uppercase">Finalizar compra</button>
+                    <a href="checkout.php" class="btn btn-dark finalizar-compra text-uppercase">Finalizar compra</a>
                 </div>
             </div>
         </div>
-
-        <?php
-        if(isset($_SESSION['nao_autenticado'])):
-        ?>
-            <div class="alert alert-danger">
-                <i class="fas fa-times-circle"></i>
-                <p>ERRO: Usuário ou senha inválidos.</p>
-            </div>
-        <?php
-        endif;
-        unset($_SESSION['nao_autenticado']);
-        ?> 
