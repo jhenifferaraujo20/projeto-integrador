@@ -178,9 +178,10 @@ include "includes/cabecalho.php";
                     <br>Quantidade: <?=$itens['quantidade']?>
                   </p>
                 </div>
-        <?php
-            }
-            ?><hr></div><?php
+              <?php } ?>
+              <hr>
+            </div>
+          <?php 
           }
         }
         ?>

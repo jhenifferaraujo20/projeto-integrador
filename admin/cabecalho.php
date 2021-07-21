@@ -28,7 +28,7 @@
             <div class="logo"><h1 class="fs-4"><a href="index.php" class="fs-4">J'adore Boutique</a></h1></div>
             <div class="menu-btns">
                 <a href="index.php" class="btn"><i class="fa fa-bar-chart"></i>Painel</a>
-                <a href="" class="btn"><i class="fa fa-shopping-cart"></i>Pedidos</a>
+                <a href="pedidos-listar.php" class="btn"><i class="fa fa-shopping-cart"></i>Pedidos</a>
                 <a href="produtos-listar.php" class="btn"><i class="fa fa-tag"></i>Produtos</a>
                 <a href="" class="btn"><i class="fa fa-address-book-o"></i>Clientes</a>
                 <a href="" class="btn"><i class="fas fa-mail-bulk"></i>Marketing</a>
