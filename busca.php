@@ -1,6 +1,6 @@
 <?php
-include "cabecalho.php";
-include "conexao.php";
+include "includes/cabecalho.php";
+include "includes/conexao.php";
 
 if(!isset($_GET['buscar'])) {
     header("Location: index.php");
@@ -9,31 +9,31 @@ if(!isset($_GET['buscar'])) {
 
 $buscar = "%" . trim($_GET['buscar']) . "%";
 
-$dbh = new PDO('mysql:host=127.0.0.1;dbname=loja_jadore', 'root', '');
-
-$query = $dbh->prepare("SELECT * FROM produtos WHERE nome LIKE :nome");
+$query = $pdo->prepare("SELECT * FROM produtos WHERE nome LIKE :nome");
 $query->bindParam(':nome', $buscar, PDO::PARAM_STR);
 $query->execute();
+$total_products = $query->rowCount();
+
 
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<div class="container-fluid">
-    <?php echo "<div class='mt-5'><h2 class='fs-4'>Sua busca: {$_GET['buscar']}</h2></div>"; ?>
+<div class="container">
+    <?php echo "<div class='mt-5'><h2 class='fs-5'>Você buscou por: {$_GET['buscar']}</h2></div>"; ?>
+    <p>Encontramos <?=$total_products?> produto(s)</p>
     <div class="row mt-4">
         <?php
         if(count($result)) {
-            foreach($result as $row) {
-                $fotos = explode(',',$row['fotos']);
-                echo "<div class='col-sm-2 col-md-3'>";
-                echo    "<div class='slide-img'>";
-                echo        "<a href='produto.php?id_produto={$row['id']}'><img src='{$fotos[0]}'></a>";
-                echo    "</div>";
-                echo    "<div class='detail-box ps-2'>";
-                echo        "<a href='produto.php?id_produto={$row['id']}' class='text-uppercase'>{$row['nome']}</a><br>";
-                echo        "R$ {$row['preco']}";
-                echo    "</div>";
-                echo "</div>";
-            }
+            foreach($result as $produto): $fotos = explode(',', $produto['fotos']); ?>
+                <div class="col-sm-4 col-md-3 pb-3 produtos">
+                    <div class="pb-2">
+                        <a href="produto.php?id=<?php echo $produto['id'] ?>" title="<?php echo $produto['nome'] ?>"><img src="<?php echo $fotos[0] ?>" alt="" width="230"></a>
+                    </div>
+                    <div class="detail-box">
+                        <a href="produto.php?id=<?php echo $produto['id'] ?>"><?php echo $produto['nome'] ?>
+                        <p>R$ <?php  echo number_format($produto['preco'], 2, ',', '.') ?></p></a>
+                    </div>
+                </div>
+            <?php endforeach;
         }else {
             echo "<div class='m-5 text-center'>Não encontramos resultados pelo  termo buscado.</div>";
         }
@@ -41,4 +41,4 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<?php include "rodape.php"; ?>
+<?php include "includes/rodape.php"; ?>

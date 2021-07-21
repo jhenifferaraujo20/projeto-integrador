@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conexao.php";
+include "includes/conexao.php";
 
 $nome = mysqli_real_escape_string($conexao, trim($_POST['nome_completo']));
 $cpf = mysqli_real_escape_string($conexao, trim($_POST['cpf']));

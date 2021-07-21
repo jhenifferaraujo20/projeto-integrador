@@ -1,4 +1,4 @@
-<?php include "cabecalho.php"; ?>
+<?php include "includes/cabecalho.php"; ?>
 
 <div class="container mt-5">
     <h1 class="mb-4 fs-4 text-uppercase">Atendimento</h1>
@@ -186,4 +186,4 @@
     </div>
 </div>
 
-<?php include "rodape.php";?>
+<?php include "includes/rodape.php";?>

@@ -1,4 +1,4 @@
-<?php include "cabecalho.php" ?>
+<?php include "includes/cabecalho.php" ?>
 
     <section class="hero-section">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -191,4 +191,4 @@
 
 
 
-<?php include "rodape.php" ?>
+<?php include "includes/rodape.php" ?>

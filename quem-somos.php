@@ -1,4 +1,4 @@
-<?php include "cabecalho.php" ?>
+<?php include "includes/cabecalho.php" ?>
 
     <section class="container">
         <div class="row text-center mt-5 mb-5">
@@ -32,4 +32,4 @@
 
     <section class="container text-center instagram"><i class="fa fa-instagram"> #J'adore Boutique</i></section>
 
-<?php include "rodape.php" ?>
+<?php include "includes/rodape.php" ?>

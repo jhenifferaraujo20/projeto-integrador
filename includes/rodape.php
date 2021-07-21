@@ -96,5 +96,13 @@
         endif;
     endif;
     ?>
+
+    <?php if(isset($_POST['update']) || isset($_POST['submit']) || isset($_GET['remove'])): ?>
+        <script>
+        $(document).ready(function(){
+            $("#botao-sacola").trigger("click");
+        });    
+        </script>
+    <?php endif; ?>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <?php 
 session_start();
-if(!$_SESSION['email']) {
-    header("Location: index.php?mensagem=login");
-    exit();
-}
 
-include "cabecalho.php"; 
-include "conexao.php";
+include_once "includes/conexao.php";
+
+if(!$_SESSION['email']) {
+  header("Location: index.php?mensagem=login");
+  exit();
+}
 
 $email = $_SESSION['email'];
 
@@ -27,6 +27,13 @@ while($dados = mysqli_fetch_assoc($resultado)){
   $estado = $dados['estado'];
 }
 
+$stmt = $pdo->prepare("SELECT pedidos.id, pedidos.data, pedidos.valor_total FROM pedidos WHERE id_cliente = ?");
+$stmt->bindValue(1, $id_cliente, PDO::PARAM_INT);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$total_pedidos = $pdo->query("SELECT pedidos.id, clientes.id FROM pedidos  INNER JOIN clientes ON pedidos.id_cliente = clientes.id WHERE clientes.id = $id_cliente")->rowCount();
+
+include "includes/cabecalho.php"; 
 ?>
 
 <div class="container mt-5">
@@ -147,7 +154,36 @@ while($dados = mysqli_fetch_assoc($resultado)){
 
     <div class="tab-pane fade" id="pedidos" role="tabpanel" aria-labelledby="pedidos-tab">
       <p class="text-center mt-5">
-        Você ainda não comprou nada na nossa loja, clique aqui e faça sua primeira compra.
+        <?php if($total_pedidos == 0) {
+          echo "Você ainda não comprou nada na nossa loja, clique aqui e faça sua primeira compra.";
+        }else {
+          foreach($result as $pedido){ 
+            $id_pedido = $pedido['id'];
+            $stmt = $pdo->prepare("SELECT produtos.nome, produtos.fotos, itens_pedido.quantidade FROM itens_pedido INNER JOIN produtos ON itens_pedido.id_produto = produtos.id WHERE id_pedido = ?");
+            $stmt->bindValue(1, $id_pedido, PDO::PARAM_INT);
+            $stmt->execute();
+            $resultItens = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            ?>
+            <div class="mb-5">
+              <h4>Pedido #<?=$pedido['id']?>:</h2>
+              <p>Valor total: <?=$pedido['valor_total'];?></p>
+              <p>Data: <?=$pedido['data'];?></p>
+              <?php foreach($resultItens as $itens){ $fotos = explode(',', $itens['fotos']);?>
+                <div class="row mb-3">
+                  <div class="col-1">
+                    <img src="<?=$fotos[0]?>" width="80">
+                  </div>
+                  <p class="col">
+                    <?=$itens['nome']?> 
+                    <br>Quantidade: <?=$itens['quantidade']?>
+                  </p>
+                </div>
+        <?php
+            }
+            ?><hr></div><?php
+          }
+        }
+        ?>
       </p>
     </div>
 
@@ -159,4 +195,4 @@ while($dados = mysqli_fetch_assoc($resultado)){
   </div>
 </div>
 
-<?php include "rodape.php";?>
+<?php include "includes/rodape.php";?>

@@ -119,7 +119,7 @@ $('.slider-nav').slick({
 
 /* ====================== SACOLA ====================== */
 $(function(){
-  $(document).on('click','.cart-btn, .bag-btn',function(){
+  $(document).on('click','.cart-btn',function(){
     $('.cart-overlay, .cart').addClass('transparentBcg, showCart')
   });
   
@@ -136,7 +136,4 @@ $(function(){
       }
   };*/
   
-  $(document).ready(function() {
-  
-  });
 });

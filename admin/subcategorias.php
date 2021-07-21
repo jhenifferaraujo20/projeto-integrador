@@ -1,4 +1,4 @@
-<?php include_once("conexao.php");
+<?php include_once "../includes/conexao.php";
 
 	$id_categoria = $_REQUEST['id_categoria'];
 	

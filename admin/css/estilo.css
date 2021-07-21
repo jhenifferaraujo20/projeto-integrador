@@ -1,0 +1,73 @@
+* {
+    font-family: 'muli';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 40vh;
+    height: 100%;
+    background: #D9B28F;
+}
+
+.menu .logo {
+    height: 20%;
+}
+
+.menu .logo h1 a{
+    color: #ffffff;
+    text-align: center;
+    margin: 2rem;
+    text-decoration: none;
+}
+
+.menu a {
+    color: #ffffff;
+    display: block;
+    text-align: left;
+    margin-left: 1.5rem;
+    padding: 1rem 0;
+}
+
+.menu-btns a:hover {
+    text-align: center;
+    background-color: rgb(235, 209, 173);
+    color: rgb(198, 139, 86);
+    margin-left: 0;
+    transition: 1s;
+}
+
+.menu-btns i {
+    padding-right: 0.5rem;
+}
+
+.container {
+    position: sticky;
+    left: 20%;
+    max-width: 80%;
+}
+
+img {
+    max-width: 110px;
+    object-fit: cover;
+}
+
+.detail-box a {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(198, 139, 86);
+}
+
+.btns {
+    color: #ffffff;
+    background-color: rgb(198, 139, 86);
+}
+
+.novo-btn {
+    text-align: end;
+}
