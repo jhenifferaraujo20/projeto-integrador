@@ -19,7 +19,7 @@
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane ms-3 fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <form method="POST" action="">
+            <form method="POST" action="contato.php">
                 <div class="row mt-5 mb-2">
                     <div class="col-md-5 col-lg-6">
                         <h2 class="fs-4">Fale Conosco</h2>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-lg-6 text-end">
-                        <button type="submit" class="btn btn-dark text-uppercase">Enviar</button>
+                        <button type="submit" name="submit" class="btn btn-dark text-uppercase">Enviar</button>
                     </div>
                 </div>
             </form>

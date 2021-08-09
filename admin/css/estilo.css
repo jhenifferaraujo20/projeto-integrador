@@ -6,6 +6,19 @@ body {
     overflow-x: hidden;
 }
 
+.carregando{
+    display: none;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.header {
+    width: 20%;
+}
+
 .menu {
     position: fixed;
     left: 0;
@@ -17,6 +30,11 @@ body {
 
 .menu .logo {
     height: 20%;
+}
+
+.menu .sair {
+    height: 20%;
+    bottom: 0;
 }
 
 .menu .logo h1 a{
@@ -46,14 +64,13 @@ body {
     padding-right: 0.5rem;
 }
 
-.container {
-    position: sticky;
-    left: 20%;
-    max-width: 80%;
+.conteudo {
+    width: 70%;
+    margin: auto;
 }
 
 img {
-    max-width: 110px;
+    max-width: 100px;
     object-fit: cover;
 }
 
@@ -63,11 +80,17 @@ img {
     color: rgb(198, 139, 86);
 }
 
-.btns {
-    color: #ffffff;
-    background-color: rgb(198, 139, 86);
+.table thead tr th{
+    color: rgb(121, 121, 121);
 }
 
-.novo-btn {
-    text-align: end;
+.toast {
+    position: absolute;
+    z-index: 999;
+    left: 10px;
+    bottom: 10px;
+}
+
+.bi-arrow-left, .bi-arrow-right {
+    font-size: 20px;
 }

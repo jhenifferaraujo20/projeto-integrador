@@ -42,7 +42,7 @@
                 <input type="submit" value="Atualizar" name="update" class="btn update-cart">
             
                 <div class="frete mb-2">
-                    <form method="post">
+                    <form action="" method="post">
                         <div class="row">
                             <div class="col-4 align-self-center">
                                 <label for="cep">Calcular frete</label>

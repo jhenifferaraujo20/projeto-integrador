@@ -1,6 +1,7 @@
 <?php 
-session_start();
-
+if(session_status() === PHP_SESSION_NONE){
+    session_start();
+}
 include "cart-functions.php";
 
 // Get the amount of items in the shopping cart, this will be displayed in the header.
@@ -65,7 +66,7 @@ $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
                         <div class="dropdown-content">
                             <div class="opcoes-menu roupas">
                                 <div>
-                                    <a href="#">Blusas</a>
+                                    <a href="produtos.php?subcategoria=Blusas">Blusas</a>
                                     <a href="#">Vestidos</a>
                                     <a href="#">Macacões</a>
                                     <a href="#">Camisas</a>

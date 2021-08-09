@@ -78,10 +78,10 @@ include "includes/conexao.php"; ?>
 
                 <div class="tamanho-produto mt-4">
                     <p class="mb-0">Tamanho</p>
-                    <button type="button" class="btn ">PP</button>
-                    <button type="button" class="btn">P</button>
-                    <button type="button" class="btn">M</button>
-                    <button type="button" class="btn">G</button>
+                    <button type="button" class="btn  tamanho">PP</button>
+                    <button type="button" class="btn tamanho">P</button>
+                    <button type="button" class="btn tamanho">M</button>
+                    <button type="button" class="btn tamanho">G</button>
                 </div>
 
                 <div class="mt-4">

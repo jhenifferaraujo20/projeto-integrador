@@ -9,7 +9,7 @@ if(isset($_SESSION['email'])){
     $id_cliente = $result['id'];
     
 
-    $sql = $pdo->prepare("INSERT INTO pedidos(id_cliente, valor_total) VALUES($id_cliente, $subtotal)");
+    $sql = $pdo->prepare("INSERT INTO pedidos(id_cliente, valor_total, status) VALUES($id_cliente, $subtotal, 'pendente')");
     $sql->execute();
 
     foreach($products as $product){
@@ -49,7 +49,7 @@ exit; */
 </html>
     <div class="col text-center p-3">
         <a href="index.php"><img src="images/logo_2.jpg" width="280" alt=""></a>
-    </div>
+    </div> 
 
     <div class="container">
         <div class="row text-center justify-content-center">
@@ -58,7 +58,7 @@ exit; */
                         <img src="images/check.svg">
                         <h2 class="fs-4">Pedido concluído com sucesso!</h2>
                         <div class="alert alert-info" role="alert">Você receberá um email de confirmação do pedido e todos os detalhes da sua compra.</div>
-                        <a href="minha-conta.php?id=<?php echo $id_cliente; ?>"></a>
+                        <a href="minha-conta.php?id=<?php echo $id_cliente; ?>">Voltar para minha conta</a>
                     <?php } ?>
             </div>
         </div>

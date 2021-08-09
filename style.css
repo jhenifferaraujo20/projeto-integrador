@@ -1,0 +1,33 @@
+body {
+    background-color: rgba(250, 250, 250, 1);
+}
+.checkout {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.coluna-sacola {
+    width: 60%;
+    height: 100vh;
+}
+
+.coluna-checkout {
+    background-color: #f5e8d6;
+    border-radius: 7px;
+    height: 90vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+}
+
+.check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}

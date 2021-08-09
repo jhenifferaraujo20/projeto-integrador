@@ -104,5 +104,13 @@
         });    
         </script>
     <?php endif; ?>
+
+    <?php if(isset($_SESSION['email'])){?>
+        <script>
+            $(document).on('click', '.user', function(){
+                window.location.href = "minha-conta.php";
+            });
+        </script>
+    <?php } ?>
 </body>
 </html>

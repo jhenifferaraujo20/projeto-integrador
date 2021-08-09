@@ -1,6 +1,7 @@
 <?php 
-session_start();
-
+if(session_status() === PHP_SESSION_NONE){
+  session_start();
+}
 include_once "includes/conexao.php";
 
 if(!$_SESSION['email']) {
@@ -164,22 +165,25 @@ include "includes/cabecalho.php";
             $stmt->execute();
             $resultItens = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
-            <div class="mb-5">
-              <h4>Pedido #<?=$pedido['id']?>:</h2>
-              <p>Valor total: <?=$pedido['valor_total'];?></p>
-              <p>Data: <?=$pedido['data'];?></p>
-              <?php foreach($resultItens as $itens){ $fotos = explode(',', $itens['fotos']);?>
-                <div class="row mb-3">
-                  <div class="col-1">
-                    <img src="<?=$fotos[0]?>" width="80">
+            <div class="card mb-5">
+              <h4 class="card-header">Pedido #<?=$pedido['id']?>:</h2>
+
+              <div class="card-body">
+                <p>Valor total: <?=$pedido['valor_total'];?></p>
+                <p>Data da compra: <?=$pedido['data'];?></p>
+                <?php foreach($resultItens as $itens){ $fotos = explode(',', $itens['fotos']);?>
+                  <div class="row mb-3">
+                    <div class="col-1">
+                      <img src="<?=$fotos[0]?>" width="80">
+                    </div>
+                    <p class="col">
+                      <?=$itens['nome']?> 
+                      <br>Quantidade: <?=$itens['quantidade']?>
+                    </p>
                   </div>
-                  <p class="col">
-                    <?=$itens['nome']?> 
-                    <br>Quantidade: <?=$itens['quantidade']?>
-                  </p>
-                </div>
-              <?php } ?>
-              <hr>
+                <?php } ?>
+              </div>
+
             </div>
           <?php 
           }

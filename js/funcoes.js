@@ -137,3 +137,8 @@ $(function(){
   };*/
   
 });
+
+/* ================== TAMANHO ================== */
+$(".tamanho").on('click', function(){
+  $(this).toggleClass('ativo').siblings().removeClass('ativo');
+})

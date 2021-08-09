@@ -16,24 +16,24 @@
     <link href="../bootstrap/bootstrap.css" rel="stylesheet">
     <!--stylesheet-->
     <link href="css/estilo.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        .carregando{
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="menu">
-            <div class="logo"><h1 class="fs-4"><a href="index.php" class="fs-4">J'adore Boutique</a></h1></div>
-            <div class="menu-btns">
-                <a href="index.php" class="btn"><i class="fa fa-bar-chart"></i>Painel</a>
-                <a href="pedidos-listar.php" class="btn"><i class="fa fa-shopping-cart"></i>Pedidos</a>
-                <a href="produtos-listar.php" class="btn"><i class="fa fa-tag"></i>Produtos</a>
-                <a href="" class="btn"><i class="fa fa-address-book-o"></i>Clientes</a>
-                <a href="" class="btn"><i class="fas fa-mail-bulk"></i>Marketing</a>
-                <a href="" class="btn"><i class="fas fa-tools"></i>Configurações</a>
-                <a href="logout.php" class="btn"><i class="fas fa-sign-out-alt"></i>Sair</a>
-            </div>
-        </nav>
-    </div>    
+    <div class="flex">
+        <header class="header">
+            <nav class="menu">
+                <div class="logo"><h1 class="fs-4"><a href="index.php" class="fs-4">J'adore Boutique</a></h1></div>
+                <div class="menu-btns">
+                    <a href="index.php" class="btn"><i class="fa fa-bar-chart"></i>Painel</a>
+                    <a href="pedidos-listar.php" class="btn"><i class="fa fa-shopping-cart"></i>Pedidos</a>
+                    <a href="produtos-listar.php" class="btn"><i class="fa fa-tag"></i>Produtos</a>
+                    <a href="clientes-listar.php" class="btn"><i class="fa fa-address-book-o"></i>Clientes</a>
+                    <a href="" class="btn"><i class="fas fa-mail-bulk"></i>Marketing</a>
+                    <a href="" class="btn"><i class="fas fa-cog"></i>Configurações</a>
+                </div>
+                <div class="sair">
+                    <a href="logout.php" class="btn"><i class="fas fa-sign-out-alt"></i>Sair</a>
+                </div>
+            </nav>
+        </header>
+        <div class="conteudo">
+     
